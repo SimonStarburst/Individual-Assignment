@@ -361,8 +361,10 @@ GameObject:
   - component: {fileID: 660047147}
   - component: {fileID: 660047146}
   - component: {fileID: 660047148}
-  - component: {fileID: 660047149}
   - component: {fileID: 660047150}
+  - component: {fileID: 660047152}
+  - component: {fileID: 660047149}
+  - component: {fileID: 660047151}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -565,6 +567,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d04184d143267264aa0e0db908f8aceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
+--- !u!114 &660047151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660047143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17fb7a94513513243aa9d5fff5ad9882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
+  movementStats: {fileID: 0}
+  attackStats: {fileID: 0}
+--- !u!114 &660047152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660047143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83d5870217b52524283797afb61a34a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
+  playerAttack: {fileID: 1971048213}
 --- !u!1 &1171039909
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,11 +853,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 379739187115087762, guid: 05813150280fa374782fa16631370d73, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 379739187115087762, guid: 05813150280fa374782fa16631370d73, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 379739187115087762, guid: 05813150280fa374782fa16631370d73, type: 3}
       propertyPath: m_LocalPosition.z
@@ -862,6 +891,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2033675399811669712, guid: 05813150280fa374782fa16631370d73, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2377030899169393157, guid: 05813150280fa374782fa16631370d73, type: 3}
       propertyPath: m_Name
       value: Enemy - Big, ranged
@@ -879,6 +912,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3029574659798091127, guid: a287b9ec676d30f45907e25a83923aae, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4539860536120263720, guid: a287b9ec676d30f45907e25a83923aae, type: 3}
       propertyPath: m_Name
       value: Enemy - Small, ranged
@@ -980,6 +1017,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy - Small, close
       objectReference: {fileID: 0}
+    - target: {fileID: 7612468866488002672, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1036,6 +1077,10 @@ PrefabInstance:
     - target: {fileID: 5776831429121168578, guid: 57930643254c757479db4c08c22983a2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991081211897236894, guid: 57930643254c757479db4c08c22983a2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
