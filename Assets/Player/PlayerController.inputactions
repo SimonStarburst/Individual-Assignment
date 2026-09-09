@@ -3,7 +3,7 @@
     "name": "PlayerController",
     "maps": [
         {
-            "name": "Keyboard + Mouse",
+            "name": "Keyboard",
             "id": "01e85496-a62d-42c8-8eb4-4f36d81ce2cc",
             "actions": [
                 {
@@ -14,16 +14,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true,
-                    "priority": 0
-                },
-                {
-                    "name": "Attack",
-                    "type": "Button",
-                    "id": "848cfbae-129f-4f62-8736-6881493c33b8",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false,
                     "priority": 0
                 }
             ],
@@ -82,17 +72,6 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
-                },
-                {
-                    "name": "",
-                    "id": "e02c98aa-5b05-4c16-bf8f-77458aa187e3",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         }

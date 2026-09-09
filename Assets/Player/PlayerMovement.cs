@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Movement")]
     private Vector2 moveInput;
-    [SerializeField, Tooltip ("Adjust movement speed of character")] private int moveSpeed;
+    [Tooltip ("Adjust movement speed of character")] public int moveSpeed;
 
     void Start()
     {
