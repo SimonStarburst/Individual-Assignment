@@ -2,9 +2,9 @@ using System.Xml.Serialization;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
-{
-    public int playerHP;
+{    
     public int maxHP;
+    public int playerHP;
 
     private void Awake()
     {
