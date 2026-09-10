@@ -1,13 +1,20 @@
+using NUnit.Framework;
+using UnityEditor.VersionControl;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 public class LevelUpScreen : MonoBehaviour
 {
     public bool lvlScreen;
+    public LvlUpCard[] allLvlCards;
+
 
     private void Awake()
     {
+        allLvlCards = Resources.LoadAll<LvlUpCard>("LevelUpCards");
         LevelScreenInactive();
         lvlScreen = false;
+        Debug.Log(allLvlCards.Length);
     }
 
     public void LevelScreenActive()
