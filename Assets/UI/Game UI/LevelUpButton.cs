@@ -5,8 +5,8 @@ using TMPro.EditorUtilities;
 
 public class LevelUpButton : MonoBehaviour
 {
-    public LvlUpCard lvlUpCard;
 
+    public LvlUpCard lvlUpCard;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI descriptionText;
 
@@ -15,6 +15,7 @@ public class LevelUpButton : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
         nameText.text = lvlUpCard.name;
         descriptionText.text = lvlUpCard.description;
     }

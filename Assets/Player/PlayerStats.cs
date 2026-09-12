@@ -67,7 +67,7 @@ public class PlayerStats : MonoBehaviour
 
         else if (totalExp == 25 && playerLvl == 2)
         {
-            lvlUp = true;
+            levelUpScreen.LevelScreenActive();
             Debug.Log("Level 3!");
             playerLvl += 1;
         }

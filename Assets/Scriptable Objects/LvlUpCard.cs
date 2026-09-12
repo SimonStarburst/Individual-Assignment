@@ -7,6 +7,4 @@ public class LvlUpCard : ScriptableObject
     public string description;
 
     public Sprite lvlUpPicture;
-
-
 }

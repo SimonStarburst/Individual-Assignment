@@ -7,14 +7,16 @@ public class LevelUpScreen : MonoBehaviour
 {
     public bool lvlScreen;
     public LvlUpCard[] allLvlCards;
+    public int RandomLevelCard;
 
 
     private void Awake()
     {
         allLvlCards = Resources.LoadAll<LvlUpCard>("LevelUpCards");
+        RandomLevelCard = Random.Range(0, allLvlCards.Length);
         LevelScreenInactive();
         lvlScreen = false;
-        Debug.Log(allLvlCards.Length);
+        Debug.Log(RandomLevelCard);
     }
 
     public void LevelScreenActive()

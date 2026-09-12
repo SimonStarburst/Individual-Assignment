@@ -266,6 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fb5729542af9642a2b7a0033019867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  cardList: {fileID: 1363807099}
   lvlUpCard: {fileID: 11400000, guid: bef66acf8e8f0614586779736cb84a9e, type: 2}
   nameText: {fileID: 1305922225}
   descriptionText: {fileID: 1304393067}
@@ -1298,6 +1299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fb5729542af9642a2b7a0033019867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  cardList: {fileID: 0}
   lvlUpCard: {fileID: 11400000, guid: 8e83f75e8e34e754cb35e9c396e5881b, type: 2}
   nameText: {fileID: 1236481442}
   descriptionText: {fileID: 435407296}
@@ -2050,6 +2052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelUpScreen
   lvlScreen: 1
+  allLvlCards: []
 --- !u!1 &1713884864
 GameObject:
   m_ObjectHideFlags: 0
@@ -2324,6 +2327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fb5729542af9642a2b7a0033019867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  cardList: {fileID: 0}
   lvlUpCard: {fileID: 11400000, guid: 83471a07e62dcd746a3ca79854b48ffd, type: 2}
   nameText: {fileID: 621439515}
   descriptionText: {fileID: 573827546}
