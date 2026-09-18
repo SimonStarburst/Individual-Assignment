@@ -1,6 +1,7 @@
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 
@@ -49,6 +50,7 @@ public class PlayerStats : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // When Player collides with Game Object with tag "EXP", they will gain 1 EXP
         if (collision.gameObject.CompareTag("EXP"))
         {
             totalExp += 1;
@@ -60,6 +62,9 @@ public class PlayerStats : MonoBehaviour
     {
         if (totalExp == 10 && playerLvl == 1)
         {
+            // Activates levelUpScreen.LevelScreenActive(), which activates the UI and pauses the game until player
+            // picks 1 out of 3 HOPEFULLY randomized cards.
+
             levelUpScreen.LevelScreenActive();
             Debug.Log("Level 2!");
             playerLvl += 1;

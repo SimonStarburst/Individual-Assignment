@@ -8,9 +8,12 @@ public class PlayerMovement : MonoBehaviour
     private Collider2D collider;
     private Rigidbody2D rb;
 
+    [SerializeField] private PlayerStats playerStats;
+
     [Header("Movement")]
     private Vector2 moveInput;
-    [Tooltip ("Adjust movement speed of character")] public int moveSpeed;
+
+    [Tooltip("Adjust movement speed of character")] public int moveSpeed;
 
     void Start()
     {
