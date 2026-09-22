@@ -36,6 +36,10 @@ public class LevelUpRandomizer : MonoBehaviour
     public bool laserEquipped;
     public bool orbEquipped;
 
+    public int baseWeapon;
+    public int weaponUpgrades;
+    public int statUpgrades;
+
 
     #endregion
 
@@ -47,6 +51,9 @@ public class LevelUpRandomizer : MonoBehaviour
         orbUpgrades = Resources.LoadAll<LvlUpCard>("OrbUpgrades");
         playerUpgrades = Resources.LoadAll<LvlUpCard>("PlayerUpgrades");
         swordUpgrades = Resources.LoadAll<LvlUpCard>("SwordUpgrades");
+        BaseRandomiser();
+        WeaponUpgradeRandomiser();
+        PlayerUpgradeRandomiser();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -60,8 +67,27 @@ public class LevelUpRandomizer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        BaseRandomiser();
+        WeaponUpgradeRandomiser();
+        PlayerUpgradeRandomiser();
     }
 
+    public void BaseRandomiser()
+    {
+        baseWeapon = Random.Range(0, baseCards.Length);
+    }
+
+    public void WeaponUpgradeRandomiser()
+    {
+
+    }
+
+    public void PlayerUpgradeRandomiser()
+    {
+        statUpgrades = Random.Range(0, playerUpgrades.Length);
+    }
+
+
+    
 
 }

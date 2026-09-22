@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a769372765963b41bcb9531fc0b4634, type: 3}
   m_Name: OrbBase
   m_EditorClassIdentifier: Assembly-CSharp::LvlUpCard
-  name: 
-  description: 
+  name: 'Weapon: Orb'
+  description: Creates an orb that spins around you, damaging enemies on impact.
   lvlUpPicture: {fileID: 0}
