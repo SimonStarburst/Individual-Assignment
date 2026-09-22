@@ -6,7 +6,10 @@ public class LevelUpRandomizer : MonoBehaviour
      * --------------------------------------------------------------------------
      * First load in following from Resources into different arrays:
      *  - Base
-     *  - Upgrades
+     *  - AuraUpgrades
+     *  - OrbUpgrades
+     *  - PlayerUpgrades
+     *  - SwordUpgrades
      *  
      *  Then randomize whether Base or Upgrade should be used first, after that 
      *  randomize contest of the chosen array.
@@ -21,7 +24,17 @@ public class LevelUpRandomizer : MonoBehaviour
     #region Variables
 
     public LvlUpCard[] baseCards;
-    public LvlUpCard[] upgradeCards;
+    public LvlUpCard[] auraUpgrades;
+    public LvlUpCard[] laserUpgrades;
+    public LvlUpCard[] orbUpgrades;
+    public LvlUpCard[] playerUpgrades;
+    public LvlUpCard[] swordUpgrades;
+
+
+
+    public bool auraEquipped;
+    public bool laserEquipped;
+    public bool orbEquipped;
 
 
     #endregion
@@ -29,15 +42,19 @@ public class LevelUpRandomizer : MonoBehaviour
     private void Awake()
     {
         baseCards = Resources.LoadAll<LvlUpCard>("Base");
-        upgradeCards = Resources.LoadAll<LvlUpCard>("Upgrade");
-
-
+        auraUpgrades = Resources.LoadAll<LvlUpCard>("AuraUpgrades");
+        laserUpgrades = Resources.LoadAll<LvlUpCard>("LaserUpgrades");
+        orbUpgrades = Resources.LoadAll<LvlUpCard>("OrbUpgrades");
+        playerUpgrades = Resources.LoadAll<LvlUpCard>("PlayerUpgrades");
+        swordUpgrades = Resources.LoadAll<LvlUpCard>("SwordUpgrades");
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        auraEquipped = false;
+        laserEquipped = false;
+        orbEquipped = false;
     }
 
     // Update is called once per frame
