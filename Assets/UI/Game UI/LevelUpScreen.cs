@@ -21,22 +21,22 @@ public class LevelUpScreen : MonoBehaviour
     private void Awake()
     {
         allLvlCards = Resources.LoadAll<LvlUpCard>("LevelUpCards");
+        LvlUpCardRandomizer();
+    }
+
+    private void Start()
+    {
         LevelScreenInactive();
         lvlScreen = false;
     }
 
     private void Update()
-    {
-        RandomLevelCard1 = Random.Range(0, allLvlCards.Length);
-        RandomLevelCard2 = Random.Range(0, allLvlCards.Length);
-        RandomLevelCard3 = Random.Range(0, allLvlCards.Length);
+    {        
+        LvlUpCardRandomizer();
     }
 
     public void LevelScreenActive()
     {
-        // Randomize the 3 lvl cards Player can pick from here?
-        // It now picks the first card of the Array, since it only randomizes when Game Object is active
-        // Need to be able to randomize lvl card while keeping the Game Object hidden
         gameObject.SetActive(true);
         lvlUpButton1.lvlUpCard = allLvlCards[RandomLevelCard1];
         lvlUpButton2.lvlUpCard = allLvlCards[RandomLevelCard2];
@@ -47,7 +47,7 @@ public class LevelUpScreen : MonoBehaviour
     }
 
     public void LevelScreenInactive()
-    {
+    {        
         gameObject.SetActive(false);
         Time.timeScale = 1;
     }
@@ -68,4 +68,22 @@ public class LevelUpScreen : MonoBehaviour
         Debug.Log("Option 3");
         LevelScreenInactive();
     }
+
+    private void LvlUpCardRandomizer()
+    {
+        // Randomize a member of the array between 0 and the length of array
+        // Do while to see if the number is the same, to randomize until they're different
+
+        do
+        {
+            RandomLevelCard1 = Random.Range(0, allLvlCards.Length);
+            RandomLevelCard2 = Random.Range(0, allLvlCards.Length);
+            RandomLevelCard3 = Random.Range(0, allLvlCards.Length);
+        }
+        while (RandomLevelCard1 == RandomLevelCard2 || RandomLevelCard1 == RandomLevelCard3 || RandomLevelCard2 == RandomLevelCard3 || RandomLevelCard2 == RandomLevelCard3 || RandomLevelCard3 == RandomLevelCard1 || RandomLevelCard3 == RandomLevelCard2);
+
+        // 2nd button is sometimes blank now, how to adjust that?    
+    
+    }
+
 }
