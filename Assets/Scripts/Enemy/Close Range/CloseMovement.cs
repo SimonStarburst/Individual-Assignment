@@ -6,9 +6,8 @@ public class CloseMovement : MonoBehaviour
 
     [SerializeField] private Transform player;
 
-    // [SerializeField] private EnemyStats enemyStats;
-    //
-    // [SerializeField] private float movementSpeed;
+    [SerializeField] private EnemyBaseStats enemyStats;
+    private float movementSpeed;
 
     private float smallMoveSpeed;
     private float empoweredSmallMoveSpeed;
@@ -24,42 +23,17 @@ public class CloseMovement : MonoBehaviour
 
     private void Start()
     {
-        // movementSpeed = enemyStats.movementSpeed;
+        movementSpeed = enemyStats.baseSpeed;
     }
 
     private void Update()
     {
-        SmallMovement();
-        BigMovement();
-        SmallEmpoweredMovement();
-        BigEmpoweredMovement();
-        BossMovement();
+        Movement();
     }
 
-    private void SmallMovement()
+    private void Movement()
     {
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, (smallMoveSpeed * Time.deltaTime));
+        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, (movementSpeed * Time.deltaTime));
     }
-
-    private void BigMovement()
-    {
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, (bigMoveSpeed * Time.deltaTime));
-    }
-
-    private void SmallEmpoweredMovement()
-    {
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, (empoweredSmallMoveSpeed * Time.deltaTime));
-    }
-
-    private void BigEmpoweredMovement()
-    {
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, (empoweredBigMoveSpeed * Time.deltaTime));
-    }
-
-    private void BossMovement()
-    {
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, (bossMoveSpeed * Time.deltaTime));
-    }
-
 
 }
