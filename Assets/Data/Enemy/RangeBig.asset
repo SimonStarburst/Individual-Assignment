@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: RangeBig
   m_EditorClassIdentifier: Assembly-CSharp::EnemyBaseStats
   baseHealth: 0
-  baseSpeed: 0
+  baseSpeed: 5
   baseStrength: 0

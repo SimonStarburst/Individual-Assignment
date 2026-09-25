@@ -8,12 +8,6 @@ public class CloseMovement : MonoBehaviour
 
     [SerializeField] private EnemyBaseStats enemyStats;
     private float movementSpeed;
-
-    private float smallMoveSpeed;
-    private float empoweredSmallMoveSpeed;
-    private float bigMoveSpeed;
-    private float empoweredBigMoveSpeed;
-    private float bossMoveSpeed;
     #endregion
 
     private void Awake()
