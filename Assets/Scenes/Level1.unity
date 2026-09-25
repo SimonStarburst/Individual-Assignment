@@ -1196,7 +1196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   playerStats: {fileID: 660047151}
-  moveSpeed: 10
+  moveSpeed: 6
 --- !u!114 &660047151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2656,6 +2656,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 660047145}
     - target: {fileID: 1089066629180602623, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
+      propertyPath: bigMoveSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1089066629180602623, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
       propertyPath: smallMoveSpeed
       value: 4
       objectReference: {fileID: 0}
@@ -2721,8 +2725,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9016560968372455168, guid: 57930643254c757479db4c08c22983a2, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 660047145}
+    - target: {fileID: 9016560968372455168, guid: 57930643254c757479db4c08c22983a2, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9016560968372455168, guid: 57930643254c757479db4c08c22983a2, type: 3}
+      propertyPath: bigMoveSpeed
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
