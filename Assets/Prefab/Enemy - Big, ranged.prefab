@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 379739187115087762}
   - component: {fileID: 2033675399811669712}
+  - component: {fileID: 1630085223541121202}
+  - component: {fileID: 4787352466099516616}
   m_Layer: 0
   m_Name: Enemy - Big, ranged
   m_TagString: Enemy
@@ -79,7 +81,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2747690628134850419, guid: 16037dbd798344f57a526d53d48f5ead, type: 3}
   m_Color: {r: 1, g: 0.47450984, b: 0.7416011, a: 1}
@@ -92,3 +94,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &1630085223541121202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2377030899169393157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d9149868d3fafb4f8ceb3bbcf8441d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LongBig
+--- !u!114 &4787352466099516616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2377030899169393157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37268fbb662b4af4785b08c4081a2d31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LongMovement

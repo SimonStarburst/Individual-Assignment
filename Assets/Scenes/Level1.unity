@@ -2533,15 +2533,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2033675399811669712, guid: 05813150280fa374782fa16631370d73, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2377030899169393157, guid: 05813150280fa374782fa16631370d73, type: 3}
       propertyPath: m_Name
-      value: Enemy - Big, ranged
+      value: Enemy - Ranged, big
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1630085223541121202, guid: 05813150280fa374782fa16631370d73, type: 3}
+    - {fileID: 4787352466099516616, guid: 05813150280fa374782fa16631370d73, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2554,13 +2552,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3029574659798091127, guid: a287b9ec676d30f45907e25a83923aae, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4539860536120263720, guid: a287b9ec676d30f45907e25a83923aae, type: 3}
       propertyPath: m_Name
-      value: Enemy - Small, ranged
+      value: Enemy - Ranged, small
       objectReference: {fileID: 0}
     - target: {fileID: 5284938697356787574, guid: a287b9ec676d30f45907e25a83923aae, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2602,7 +2596,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6598429513472829731, guid: a287b9ec676d30f45907e25a83923aae, type: 3}
+    - {fileID: 8737627474142281978, guid: a287b9ec676d30f45907e25a83923aae, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2655,13 +2651,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1089066629180602623, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 660047145}
+    - target: {fileID: 1089066629180602623, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
+      propertyPath: smallMoveSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7570037286266038863, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
       propertyPath: m_Name
-      value: Enemy - Small, close
-      objectReference: {fileID: 0}
-    - target: {fileID: 7612468866488002672, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
+      value: Enemy - Close, small
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2678,7 +2678,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5424826031250005867, guid: 57930643254c757479db4c08c22983a2, type: 3}
       propertyPath: m_Name
-      value: Enemy - Big, close
+      value: Enemy - Close, big
       objectReference: {fileID: 0}
     - target: {fileID: 5776831429121168578, guid: 57930643254c757479db4c08c22983a2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2720,9 +2720,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6991081211897236894, guid: 57930643254c757479db4c08c22983a2, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
+    - target: {fileID: 9016560968372455168, guid: 57930643254c757479db4c08c22983a2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
