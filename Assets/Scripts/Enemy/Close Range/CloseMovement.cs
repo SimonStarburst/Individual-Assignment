@@ -4,12 +4,17 @@ public class CloseMovement : MonoBehaviour
 {
     #region Variables
 
-    public Transform player;
-    public float smallMoveSpeed;
-    public float empoweredSmallMoveSpeed;
-    public float bigMoveSpeed;
-    public float empoweredBigMoveSpeed;
-    public float bossMoveSpeed;
+    [SerializeField] private Transform player;
+
+    // [SerializeField] private EnemyStats enemyStats;
+    //
+    // [SerializeField] private float movementSpeed;
+
+    private float smallMoveSpeed;
+    private float empoweredSmallMoveSpeed;
+    private float bigMoveSpeed;
+    private float empoweredBigMoveSpeed;
+    private float bossMoveSpeed;
     #endregion
 
     private void Awake()
@@ -19,7 +24,7 @@ public class CloseMovement : MonoBehaviour
 
     private void Start()
     {
-        
+        // movementSpeed = enemyStats.movementSpeed;
     }
 
     private void Update()
