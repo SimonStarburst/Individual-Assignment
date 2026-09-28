@@ -777,6 +777,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4a5e3594d9a15419fef91c28fec1a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  playerMovement: {fileID: 1536994862}
+  cooldown: 3
+  abilityTimer: 0
 --- !u!1 &597798321
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,6 +1908,17 @@ MonoBehaviour:
   baseWeapon: 0
   weaponUpgrades: 0
   statUpgrades: 0
+--- !u!114 &1536994862 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1952925944396099562, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+  m_PrefabInstance: {fileID: 6986607547563751973}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4a6f651887e975479cb3bc8b8fe3763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
 --- !u!1 &1820347757
 GameObject:
   m_ObjectHideFlags: 0
