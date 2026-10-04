@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class PlayerStats : MonoBehaviour
 
 {
+
+    [SerializeField] private PlayerBaseStats playerStats;
     public PlayerMovement moveScript;
     public PlayerAttack attackScript;
     public Health playerHealth;
@@ -14,10 +16,10 @@ public class PlayerStats : MonoBehaviour
 
     [Header("Player Stats")]
 
-    [SerializeField] private int maxHP;
-    [SerializeField] private int playerHP;
-    [SerializeField] private int moveStat;
-    [SerializeField] private int attackStat;
+    public int maxHP;
+    public int playerHP;
+    public int moveStat;
+    public int attackStat;
 
     [Header("Player Level")]
     [SerializeField] private int playerLvl;
@@ -29,6 +31,9 @@ public class PlayerStats : MonoBehaviour
     private void Awake()
     {
         lvlUp = levelUpScreen.lvlScreen;
+        maxHP = playerStats.baseHealth;
+        moveStat = playerStats.baseSpeed;
+        attackStat = playerStats.baseStrength;
         playerLvl = 1;
         totalExp = 0;
     }

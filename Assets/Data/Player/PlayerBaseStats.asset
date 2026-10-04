@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PlayerBaseStats
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats2
   baseHealth: 100
-  baseSpeed: 10
+  baseSpeed: 5
   baseStrength: 10

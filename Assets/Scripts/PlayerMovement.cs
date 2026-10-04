@@ -17,13 +17,18 @@ public class PlayerMovement : MonoBehaviour
     public bool left;
     public bool right;
 
-    [Tooltip("Adjust movement speed of character")] public int moveSpeed;
+    public int moveSpeed;
     #endregion
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        collider = GetComponent<Collider2D>();
+    }
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        collider = GetComponent<Collider2D>(); 
+        moveSpeed = playerStats.moveStat;
     }
 
     void Update()
