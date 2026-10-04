@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private PlayerStats playerStats;
 
     [Header("Movement")]
-    private Vector2 moveInput;
+    public Vector2 moveInput;
 
     public bool left;
     public bool right;
@@ -41,15 +41,13 @@ public class PlayerMovement : MonoBehaviour
     {
         if (moveInput.x == -1f)
         {
-            Debug.Log("Going Left");
-            //gameObject.transform.Rotate(Vector2.zero);
-            //gameObject.transform.rotation.y = 0f;
-            
+            right = false;
+            left = true;
         }
         else if (moveInput.x == 1f)
         {
-            Debug.Log("Going Right");
-            gameObject.transform.Rotate(0f, 0f, 180f);
+            left = false;            
+            right = true;
         }
     }
 } 

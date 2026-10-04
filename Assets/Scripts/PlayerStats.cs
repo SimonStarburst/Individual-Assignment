@@ -8,7 +8,7 @@ public class PlayerStats : MonoBehaviour
 {
     public PlayerMovement moveScript;
     public PlayerAttack attackScript;
-    public PlayerHealth healthScript;
+    public Health playerHealth;
     public LevelUpScreen levelUpScreen;
 
 
@@ -30,8 +30,6 @@ public class PlayerStats : MonoBehaviour
     {
         lvlUp = levelUpScreen.lvlScreen;
         playerLvl = 1;
-        maxHP = healthScript.maxHP;
-        playerHP = maxHP;
         totalExp = 0;
     }
 
@@ -44,7 +42,6 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        maxHP = healthScript.maxHP;
         LevelUp();
     }
 
