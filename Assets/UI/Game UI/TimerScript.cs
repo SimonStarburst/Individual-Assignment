@@ -4,7 +4,6 @@ using System;
 
 public class TimerScript : MonoBehaviour
 {
-
     private float timerTime;
     [SerializeField] private TextMeshProUGUI timerText;
 

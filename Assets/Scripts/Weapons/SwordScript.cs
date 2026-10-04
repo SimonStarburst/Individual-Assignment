@@ -10,8 +10,8 @@ public class SwordScript : MonoBehaviour
 
     public float abilityTimer;
 
-    private Vector3 left = new Vector3 (-1.5f ,0f);
-    private Vector3 right = new Vector3 (1.5f, 0f);
+    private Vector3 left = new Vector3 (-2f ,0f);
+    private Vector3 right = new Vector3 (2f, 0f);
     #endregion
 
 
@@ -43,11 +43,13 @@ public class SwordScript : MonoBehaviour
     {
         if (playerMovement.right)
         {
+            gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 180f);
             gameObject.transform.position = playerMovement.transform.position + right;
         }
 
         else if (playerMovement.left)
         {
+            gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             gameObject.transform.position = playerMovement.transform.position + left;
         }
     }

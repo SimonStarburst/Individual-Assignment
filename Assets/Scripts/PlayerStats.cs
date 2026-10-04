@@ -32,6 +32,7 @@ public class PlayerStats : MonoBehaviour
     {
         lvlUp = levelUpScreen.lvlScreen;
         maxHP = playerStats.baseHealth;
+        playerHP = maxHP;
         moveStat = playerStats.baseSpeed;
         attackStat = playerStats.baseStrength;
         playerLvl = 1;
