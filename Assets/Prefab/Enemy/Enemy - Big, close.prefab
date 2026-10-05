@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6991081211897236894}
   - component: {fileID: 773865035841097610}
   - component: {fileID: 9016560968372455168}
+  - component: {fileID: 6335179053431742344}
   m_Layer: 0
   m_Name: Enemy - Big, close
   m_TagString: Enemy
@@ -118,5 +119,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d44c8cdeb8079e4fae0a0bb72aad4ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CloseMovement
-  player: {fileID: 1256219392025961595, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+  player: {fileID: 0}
   enemyStats: {fileID: 11400000, guid: 47902ab4f3888c74aab3032f3ca11c03, type: 2}
+--- !u!114 &6335179053431742344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5424826031250005867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20479684d807af947bf5309f7d497f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
+  baseStat: {fileID: 11400000, guid: 47902ab4f3888c74aab3032f3ca11c03, type: 2}
+  maxHealth: 0
+  currentHealth: 0

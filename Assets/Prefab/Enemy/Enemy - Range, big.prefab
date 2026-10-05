@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6591549450623039471}
   - component: {fileID: 5794423810283049627}
   - component: {fileID: 5587684430480983795}
+  - component: {fileID: 6230392575804249648}
   m_Layer: 0
   m_Name: Enemy - Range, big
   m_TagString: Untagged
@@ -107,3 +108,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RangeMovement
   player: {fileID: 0}
   enemyStats: {fileID: 11400000, guid: 0ce52e02693e36a45b9f3b99e218c444, type: 2}
+--- !u!114 &6230392575804249648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4343139310448740654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20479684d807af947bf5309f7d497f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
+  baseStat: {fileID: 11400000, guid: 0ce52e02693e36a45b9f3b99e218c444, type: 2}
+  maxHealth: 0
+  currentHealth: 0

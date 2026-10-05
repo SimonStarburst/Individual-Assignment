@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyBaseStats
   baseHealth: 3
   baseSpeed: 2.5
-  baseStrength: 0
+  baseStrength: 3
