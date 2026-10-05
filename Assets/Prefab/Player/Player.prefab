@@ -161,7 +161,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!114 &5153498226807135862
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17fb7a94513513243aa9d5fff5ad9882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
-  playerStats: {fileID: 11400000, guid: e34d018e11fc7834e87480c5ef2f3f6d, type: 2}
+  playerStats: {fileID: 11400000, guid: d63774299c631224d850d9ddc0fb8c67, type: 2}
   moveScript: {fileID: 1952925944396099562}
   attackScript: {fileID: 7576468092125415852}
   playerHealth: {fileID: 9070195231522010199}
@@ -242,6 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20479684d807af947bf5309f7d497f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
+  baseStat: {fileID: 11400000, guid: d63774299c631224d850d9ddc0fb8c67, type: 2}
   maxHealth: 0
   currentHealth: 0
 --- !u!114 &1952925944396099562

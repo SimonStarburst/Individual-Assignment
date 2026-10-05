@@ -151,6 +151,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CloseAttack
   attackStat: {fileID: 11400000, guid: 5a8e3cda3811bf24fb49923484be7aef, type: 2}
+  damageInterval: 1
+  attackTimer: 0
 --- !u!61 &5795896852471609654
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -181,7 +183,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
