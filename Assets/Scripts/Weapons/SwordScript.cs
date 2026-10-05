@@ -10,8 +10,8 @@ public class SwordScript : MonoBehaviour
 
     public float abilityTimer;
 
-    private Vector3 left = new Vector3 (-2f ,0f);
-    private Vector3 right = new Vector3 (2f, 0f);
+    private Vector3 left = new Vector3 (-0.3f ,0f);
+    private Vector3 right = new Vector3 (0.3f, 0f);
     #endregion
 
 
