@@ -7,7 +7,7 @@ public class PlayerStats : MonoBehaviour
 
 {
 
-    [SerializeField] private PlayerBaseStats playerStats;
+    [SerializeField] private BaseStats playerStats;
     public PlayerMovement moveScript;
     public PlayerAttack attackScript;
     public Health playerHealth;
@@ -16,10 +16,10 @@ public class PlayerStats : MonoBehaviour
 
     [Header("Player Stats")]
 
-    public int maxHP;
-    public int playerHP;
-    public int moveStat;
-    public int attackStat;
+    public float maxHP;
+    public float playerHP;
+    public float moveStat;
+    public float attackStat;
 
     [Header("Player Level")]
     [SerializeField] private int playerLvl;

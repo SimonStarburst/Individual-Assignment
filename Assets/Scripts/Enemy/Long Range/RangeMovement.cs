@@ -6,7 +6,7 @@ public class RangeMovement : MonoBehaviour
 
     [SerializeField] private Transform player;
 
-    [SerializeField] private EnemyBaseStats enemyStats;
+    [SerializeField] private BaseStats enemyStats;
     private float movementSpeed;
     #endregion
 

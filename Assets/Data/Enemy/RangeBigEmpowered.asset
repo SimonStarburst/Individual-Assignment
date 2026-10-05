@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e2bb1f64631fbc43bce587b92acb595, type: 3}
+  m_Script: {fileID: 11500000, guid: d38e1eb4ead0f3d4894a01f625aef4a2, type: 3}
   m_Name: RangeBigEmpowered
   m_EditorClassIdentifier: Assembly-CSharp::EnemyBaseStats
   baseHealth: 0

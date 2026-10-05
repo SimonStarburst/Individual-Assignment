@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public bool left;
     public bool right;
 
-    public int moveSpeed;
+    public float moveSpeed;
     #endregion
 
     private void Awake()

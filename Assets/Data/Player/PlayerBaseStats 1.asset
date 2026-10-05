@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e8f56c611ffa564481e88d1fe603c5a, type: 3}
-  m_Name: PlayerBaseStats
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerStats2
+  m_Script: {fileID: 11500000, guid: d38e1eb4ead0f3d4894a01f625aef4a2, type: 3}
+  m_Name: PlayerBaseStats 1
+  m_EditorClassIdentifier: Assembly-CSharp::BaseStats
   baseHealth: 100
   baseSpeed: 5
   baseStrength: 10
