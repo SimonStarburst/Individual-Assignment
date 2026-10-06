@@ -13,24 +13,19 @@ public class LevelUpScreen : MonoBehaviour
     public LevelUpButton lvlUpButton2;
     public LevelUpButton lvlUpButton3;
 
-    private LevelUpRandomizer levelUpRandomizer;
+    [SerializeField] private LevelUpRandomizer levelUpRandomizer;
 
     #endregion
 
     private void Awake()
     {
-        levelUpRandomizer = GetComponent<LevelUpRandomizer>();
-        // allLvlCards = Resources.LoadAll<LvlUpCard>("LevelUpCards");
+        //levelUpRandomizer = GetComponent<LevelUpRandomizer>();
+        //allLvlCards = Resources.LoadAll<LvlUpCard>("LevelUpCards");
     }
 
     private void Start()
     {
-        lvlUpButton1.lvlUpCard = levelUpRandomizer.baseCards[levelUpRandomizer.baseWeapon];
-
-        lvlUpButton3.lvlUpCard = levelUpRandomizer.playerUpgrades[levelUpRandomizer.statUpgrades];
-
         LevelScreenInactive();
-        lvlScreen = false;
     }
 
     private void Update()
@@ -40,6 +35,7 @@ public class LevelUpScreen : MonoBehaviour
 
     public void LevelScreenActive()
     {
+        lvlScreen = true;
         gameObject.SetActive(true);
 
         // lvlUpButton1 (BASE)
@@ -57,13 +53,13 @@ public class LevelUpScreen : MonoBehaviour
     {        
         gameObject.SetActive(false);
         Time.timeScale = 1;
+        lvlScreen = false;
     }
 
     public void option1()
     {
-        Debug.Log("Option 1");
+        Debug.Log("Option 1" + levelUpRandomizer.baseWeapon);
         LevelScreenInactive();
-
     }
     public void option2()
     {

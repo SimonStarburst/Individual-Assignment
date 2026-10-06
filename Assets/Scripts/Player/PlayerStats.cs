@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerStats : MonoBehaviour
 
 {
+    #region Variables
 
     [SerializeField] private BaseStats playerStats;
     public PlayerMovement moveScript;
@@ -26,6 +27,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private int totalExp;
 
     private bool lvlUp;
+    #endregion
 
 
     private void Awake()

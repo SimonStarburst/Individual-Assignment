@@ -23,14 +23,12 @@ public class CloseAttack : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-
         if (collision.gameObject.tag == "Player" && attackTimer > damageInterval)
         {
             //var healthComponent = collision.GetComponent<Health>();
             Health playerHealth = collision.GetComponent<Health>();
             if (playerHealth != null)
             {
-                Debug.Log("Player takes " + damage + " damage!");
                 playerHealth.TakeDamage(damage);
             }
             attackTimer = 0f;

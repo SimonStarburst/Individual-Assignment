@@ -169,7 +169,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &91002845
 RectTransform:
   m_ObjectHideFlags: 0
@@ -235,7 +235,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 759904812}
         m_TargetAssemblyTypeName: LevelUpScreen, Assembly-CSharp
         m_MethodName: option1
         m_Mode: 1
@@ -1711,7 +1711,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &748863908
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1793,7 +1793,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 759904812}
         m_TargetAssemblyTypeName: LevelUpScreen, Assembly-CSharp
         m_MethodName: option3
         m_Mode: 1
@@ -1852,7 +1852,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 759904811}
-  - component: {fileID: 759904813}
   - component: {fileID: 759904812}
   m_Layer: 5
   m_Name: LEVEL UP
@@ -1900,30 +1899,7 @@ MonoBehaviour:
   lvlUpButton1: {fileID: 91002849}
   lvlUpButton2: {fileID: 1967412527}
   lvlUpButton3: {fileID: 748863909}
---- !u!114 &759904813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 759904810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9bfc445dac15ba46a116c7468f10fb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LevelUpRandomizer
-  baseCards: []
-  auraUpgrades: []
-  laserUpgrades: []
-  orbUpgrades: []
-  playerUpgrades: []
-  swordUpgrades: []
-  auraEquipped: 0
-  laserEquipped: 0
-  orbEquipped: 0
-  baseWeapon: 0
-  weaponUpgrades: 0
-  statUpgrades: 0
+  levelUpRandomizer: {fileID: 1363807104}
 --- !u!1 &951499247
 GameObject:
   m_ObjectHideFlags: 0
@@ -2842,6 +2818,7 @@ GameObject:
   - component: {fileID: 1363807102}
   - component: {fileID: 1363807101}
   - component: {fileID: 1363807100}
+  - component: {fileID: 1363807104}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2936,6 +2913,31 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1363807104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363807099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9bfc445dac15ba46a116c7468f10fb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelUpRandomizer
+  baseCards: []
+  auraUpgrades: []
+  laserUpgrades: []
+  orbUpgrades: []
+  playerUpgrades: []
+  swordUpgrades: []
+  levelUpScreen: {fileID: 759904812}
+  auraEquipped: 0
+  laserEquipped: 0
+  orbEquipped: 0
+  baseWeapon: 0
+  weaponUpgrades: 0
+  statUpgrades: 0
 --- !u!1 &1377684072
 GameObject:
   m_ObjectHideFlags: 0
@@ -3121,6 +3123,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20479684d807af947bf5309f7d497f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
+--- !u!1 &1690615646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1690615647}
+  m_Layer: 0
+  m_Name: EnemyPools
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1690615647
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690615646}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.83978, y: -5.35196, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1891641118}
+  - {fileID: 2104426329}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1820347757
 GameObject:
   m_ObjectHideFlags: 0
@@ -3281,6 +3316,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1891641117
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1891641118}
+  - component: {fileID: 1891641119}
+  m_Layer: 0
+  m_Name: Close(S)Pool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1891641118
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891641117}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1690615647}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1891641119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891641117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cfb46570ff36e740ae4c14b5bc98399, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectPool
+  prefab: {fileID: 7570037286266038863, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
+  poolSize: 20
 --- !u!1 &1967412525
 GameObject:
   m_ObjectHideFlags: 0
@@ -3300,7 +3381,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1967412526
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3382,7 +3463,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 759904812}
         m_TargetAssemblyTypeName: LevelUpScreen, Assembly-CSharp
         m_MethodName: option2
         m_Mode: 1
@@ -3432,6 +3513,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1967412525}
   m_CullTransparentMesh: 1
+--- !u!1 &2104426328
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2104426329}
+  - component: {fileID: 2104426330}
+  m_Layer: 0
+  m_Name: Close(B)Pool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2104426329
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104426328}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1690615647}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2104426330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104426328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cfb46570ff36e740ae4c14b5bc98399, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectPool
+  prefab: {fileID: 5424826031250005867, guid: 57930643254c757479db4c08c22983a2, type: 3}
+  poolSize: 20
 --- !u!1001 &5375191573198627648
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3767,6 +3894,7 @@ SceneRoots:
   - {fileID: 506750173}
   - {fileID: 1377684073}
   - {fileID: 958017253}
+  - {fileID: 1690615647}
   - {fileID: 7838078755418052615}
   - {fileID: 9121972734723653748}
   - {fileID: 5375191573198627648}

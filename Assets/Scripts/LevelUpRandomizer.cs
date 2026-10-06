@@ -30,7 +30,7 @@ public class LevelUpRandomizer : MonoBehaviour
     public LvlUpCard[] playerUpgrades;
     public LvlUpCard[] swordUpgrades;
 
-
+    [SerializeField] private LevelUpScreen levelUpScreen;
 
     public bool auraEquipped;
     public bool laserEquipped;
@@ -67,9 +67,12 @@ public class LevelUpRandomizer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        BaseRandomiser();
-        WeaponUpgradeRandomiser();
-        PlayerUpgradeRandomiser();
+        if (!levelUpScreen.lvlScreen)
+        {        
+            BaseRandomiser();
+            WeaponUpgradeRandomiser();
+            PlayerUpgradeRandomiser();
+        }
     }
 
     public void BaseRandomiser()
