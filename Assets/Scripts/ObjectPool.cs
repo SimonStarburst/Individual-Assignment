@@ -5,7 +5,7 @@ using UnityEngine.Pool;
 public class ObjectPool : MonoBehaviour
 {
     public GameObject prefab; // Prefab to pool from
-    public int poolSize = 20;
+    public int poolSize = 10;
 
     private List<GameObject> pool;
 
