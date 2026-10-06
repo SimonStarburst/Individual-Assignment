@@ -4,8 +4,6 @@ public class CloseMovement : MonoBehaviour
 {
     #region Variables
 
-    [SerializeField] private Transform player;
-
     [SerializeField] private BaseStats enemyStats;
     private float movementSpeed;
     #endregion
@@ -27,7 +25,8 @@ public class CloseMovement : MonoBehaviour
 
     private void Movement()
     {
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, (movementSpeed * Time.deltaTime));
+       GameObject target = GameObject.FindGameObjectWithTag("Player");
+       transform.position = Vector2.MoveTowards(transform.position, target.transform.position, (movementSpeed * Time.deltaTime));
     }
 
 }

@@ -9,7 +9,7 @@ public class EnemyManager : MonoBehaviour
     public ObjectPool rangeSmallPool;
     public ObjectPool rangeBigPool;
 
-    public Transform player;
+    GameObject target;
 
     public float spawnInterval = 1f;
     public float spawnDistance = 12f;
@@ -23,7 +23,7 @@ public class EnemyManager : MonoBehaviour
 
     private void Update()
     {
-        player = player.transform;
+        target = GameObject.FindGameObjectWithTag("Player");
     }
 
     IEnumerator SpawnEnemyCoroutine()
@@ -38,7 +38,7 @@ public class EnemyManager : MonoBehaviour
     void SpawnObject()
     {
         Vector2 randomDirection = Random.insideUnitCircle.normalized;
-        spawnPosition = player.position + (Vector3)(randomDirection * spawnDistance);
+        spawnPosition = target.transform.position + (Vector3)(randomDirection * spawnDistance);
         GameObject enemy = closeSmallPool.GetPooledObject();
         enemy.transform.position = spawnPosition;
         enemy.SetActive(true);

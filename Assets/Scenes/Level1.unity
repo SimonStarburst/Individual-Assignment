@@ -3285,9 +3285,8 @@ MonoBehaviour:
   closeBigPool: {fileID: 2104426330}
   rangeSmallPool: {fileID: 79659880}
   rangeBigPool: {fileID: 1675832373}
-  player: {fileID: 660047145}
   spawnInterval: 1
-  spawnDistance: 12
+  spawnDistance: 50
   spawnPosition: {x: 0, y: 0}
 --- !u!1 &1820347757
 GameObject:
