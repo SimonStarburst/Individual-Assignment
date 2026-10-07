@@ -343,6 +343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fb5729542af9642a2b7a0033019867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  levelUpRandomizer: {fileID: 1363807104}
   lvlUpCard: {fileID: 11400000, guid: 83471a07e62dcd746a3ca79854b48ffd, type: 2}
   nameText: {fileID: 1305922225}
   descriptionText: {fileID: 1304393067}
@@ -1791,6 +1792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fb5729542af9642a2b7a0033019867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  levelUpRandomizer: {fileID: 1363807104}
   lvlUpCard: {fileID: 11400000, guid: bef66acf8e8f0614586779736cb84a9e, type: 2}
   nameText: {fileID: 1236481442}
   descriptionText: {fileID: 435407296}
@@ -2964,6 +2966,7 @@ MonoBehaviour:
   orbUpgrades: []
   playerUpgrades: []
   swordUpgrades: []
+  upgradeList: []
   levelUpScreen: {fileID: 759904812}
   auraEquipped: 0
   laserEquipped: 0
@@ -3038,11 +3041,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1363807103}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -650}
-  m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 500, y: 50}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1532163611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3063,9 +3066,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'SCORE:
-
-    AMOUNT'
+  m_text: 'SCORE: AMOUNT'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3547,6 +3548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fb5729542af9642a2b7a0033019867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  levelUpRandomizer: {fileID: 1363807104}
   lvlUpCard: {fileID: 11400000, guid: bef66acf8e8f0614586779736cb84a9e, type: 2}
   nameText: {fileID: 621439515}
   descriptionText: {fileID: 573827546}
@@ -3879,6 +3881,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7401738909494766118, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449248626332697784, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8809804976255400007, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}

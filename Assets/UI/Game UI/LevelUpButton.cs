@@ -5,6 +5,7 @@ using TMPro.EditorUtilities;
 
 public class LevelUpButton : MonoBehaviour
 {
+    [SerializeField] private LevelUpRandomizer levelUpRandomizer;
 
     public LvlUpCard lvlUpCard;
     public TextMeshProUGUI nameText;

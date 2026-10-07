@@ -1,3 +1,6 @@
+using NUnit.Framework;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class LevelUpRandomizer : MonoBehaviour
@@ -11,13 +14,9 @@ public class LevelUpRandomizer : MonoBehaviour
      *  - PlayerUpgrades
      *  - SwordUpgrades
      *  
-     *  Then randomize whether Base or Upgrade should be used first, after that 
-     *  randomize contest of the chosen array.
-     *  
-     *  First options should only be new weapons (Base) or 
-     *  movement speed (Upgrades), but as the player chooses weapons (Base) 
-     *  they unlock more upgrades (Upgrades) for that specific base weapon, all 
-     *  while removing the weapon (Base) from the Base Array
+     *  Create a List<> for upgrades that add Arrays to it based on what base weapon is being used.
+     *  Starts with only swordUpgrades but as soon as ie the base card for Aura is chosen, the resources
+     *  from the auraUpgrades Array are added to the upgrades list, thusly being added to the pool of randomized upgrades being posted
      * --------------------------------------------------------------------------
     */
 
@@ -29,6 +28,8 @@ public class LevelUpRandomizer : MonoBehaviour
     public LvlUpCard[] orbUpgrades;
     public LvlUpCard[] playerUpgrades;
     public LvlUpCard[] swordUpgrades;
+
+    public List<LvlUpCard> upgradeList;
 
     [SerializeField] private LevelUpScreen levelUpScreen;
 
@@ -51,9 +52,7 @@ public class LevelUpRandomizer : MonoBehaviour
         orbUpgrades = Resources.LoadAll<LvlUpCard>("OrbUpgrades");
         playerUpgrades = Resources.LoadAll<LvlUpCard>("PlayerUpgrades");
         swordUpgrades = Resources.LoadAll<LvlUpCard>("SwordUpgrades");
-        BaseRandomiser();
-        WeaponUpgradeRandomiser();
-        PlayerUpgradeRandomiser();
+        upgradeList = swordUpgrades.ToList();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -82,7 +81,7 @@ public class LevelUpRandomizer : MonoBehaviour
 
     public void WeaponUpgradeRandomiser()
     {
-
+        weaponUpgrades = Random.Range(0, upgradeList.Count);
     }
 
     public void PlayerUpgradeRandomiser()

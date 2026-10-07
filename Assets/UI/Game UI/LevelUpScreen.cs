@@ -38,10 +38,12 @@ public class LevelUpScreen : MonoBehaviour
         lvlScreen = true;
         gameObject.SetActive(true);
 
+        LevelUpCard1();
         // lvlUpButton1 (BASE)
-        lvlUpButton1.lvlUpCard = levelUpRandomizer.baseCards[levelUpRandomizer.baseWeapon];
+        //lvlUpButton1.lvlUpCard = levelUpRandomizer.baseCards[levelUpRandomizer.baseWeapon];
 
         // lvlUpButton2 (WEAPON UPGRADE)
+
 
         // lvlUpButton3 (PLAYER UPGRADE)
         lvlUpButton3.lvlUpCard = levelUpRandomizer.playerUpgrades[levelUpRandomizer.statUpgrades];
@@ -58,7 +60,7 @@ public class LevelUpScreen : MonoBehaviour
 
     public void option1()
     {
-        Debug.Log("Option 1" + levelUpRandomizer.baseWeapon);
+        Debug.Log("Option 1 " + levelUpRandomizer.baseWeapon);
         LevelScreenInactive();
     }
     public void option2()
@@ -72,14 +74,19 @@ public class LevelUpScreen : MonoBehaviour
         LevelScreenInactive();
     }
 
-    private void LvlUpCardRandomizer()
+    private void LevelUpCard1()
     {
-        // Randomize a member of the array between 0 and the length of array
-        // Do while to see if the number is the same, to randomize until they're different
+        lvlUpButton1.lvlUpCard.name = levelUpRandomizer.baseCards[levelUpRandomizer.baseWeapon].ToString();
+    }
 
+    private void LevelUpCard2()
+    {
 
-        // 2nd button is sometimes blank now, how to adjust that?    
-    
+    }
+
+    private void LevelUpCard3()
+    {
+
     }
 
 }
