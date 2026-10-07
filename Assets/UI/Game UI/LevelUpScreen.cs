@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -6,21 +7,18 @@ using UnityEngine.Assertions;
 public class LevelUpScreen : MonoBehaviour
 {
     #region    Variables
-    public bool lvlScreen;
-    public LvlUpCard[] allLvlCards;
 
-    public LevelUpButton lvlUpButton1;
-    public LevelUpButton lvlUpButton2;
-    public LevelUpButton lvlUpButton3;
+    //public LvlUpCard[] allLvlCards;
 
-    [SerializeField] private LevelUpRandomizer levelUpRandomizer;
+    [SerializeField]List<LevelUpButton> levelUpButtons;
+
+
 
     #endregion
 
     private void Awake()
     {
-        //levelUpRandomizer = GetComponent<LevelUpRandomizer>();
-        //allLvlCards = Resources.LoadAll<LvlUpCard>("LevelUpCards");
+
     }
 
     private void Start()
@@ -33,34 +31,31 @@ public class LevelUpScreen : MonoBehaviour
 
     }
 
-    public void LevelScreenActive()
-    {
-        lvlScreen = true;
-        gameObject.SetActive(true);
-
-        LevelUpCard1();
-        // lvlUpButton1 (BASE)
-        //lvlUpButton1.lvlUpCard = levelUpRandomizer.baseCards[levelUpRandomizer.baseWeapon];
-
-        // lvlUpButton2 (WEAPON UPGRADE)
-
-
-        // lvlUpButton3 (PLAYER UPGRADE)
-        lvlUpButton3.lvlUpCard = levelUpRandomizer.playerUpgrades[levelUpRandomizer.statUpgrades];
-
+    public void LevelScreenActive(List<LvlUpCard> lvlUpCards)
+    {        
         Time.timeScale = 0;
+        gameObject.SetActive(true);
+        for (int i = 0; i < lvlUpCards.Count; i++)
+        {
+            levelUpButtons[i].Set(lvlUpCards[i]);
+        }
+    }
+
+    public void Upgrade(int pressedButton)
+    {
+        Debug.Log("Player pressed :" + pressedButton.ToString());
+        LevelScreenInactive();
     }
 
     public void LevelScreenInactive()
-    {        
-        gameObject.SetActive(false);
+    {                
         Time.timeScale = 1;
-        lvlScreen = false;
+        gameObject.SetActive(false);
     }
 
     public void option1()
     {
-        Debug.Log("Option 1 " + levelUpRandomizer.baseWeapon);
+        Debug.Log("Option 1");
         LevelScreenInactive();
     }
     public void option2()
@@ -76,7 +71,6 @@ public class LevelUpScreen : MonoBehaviour
 
     private void LevelUpCard1()
     {
-        lvlUpButton1.lvlUpCard.name = levelUpRandomizer.baseCards[levelUpRandomizer.baseWeapon].ToString();
     }
 
     private void LevelUpCard2()

@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using TMPro.EditorUtilities;
+using Unity.VisualScripting;
 
 public class LevelUpButton : MonoBehaviour
 {
@@ -11,14 +12,10 @@ public class LevelUpButton : MonoBehaviour
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI descriptionText;
 
-    public Image artImage;
+    public Image icon;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+public void Set(LvlUpCard lvlUpCard)
     {
-
-        nameText.text = lvlUpCard.name;
-        descriptionText.text = lvlUpCard.description;
+        icon.sprite = lvlUpCard.lvlUpPicture;
     }
-
 }

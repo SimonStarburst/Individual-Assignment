@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a769372765963b41bcb9531fc0b4634, type: 3}
   m_Name: OrbAreaUp
   m_EditorClassIdentifier: Assembly-CSharp::LvlUpCard
+  levelUpUpgrade: 1
   name: 
   description: 
   lvlUpPicture: {fileID: 0}

@@ -66,12 +66,12 @@ public class LevelUpRandomizer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!levelUpScreen.lvlScreen)
-        {        
-            BaseRandomiser();
-            WeaponUpgradeRandomiser();
-            PlayerUpgradeRandomiser();
-        }
+        //if (!levelUpScreen.lvlScreen)
+        //{        
+        //    BaseRandomiser();
+        //    WeaponUpgradeRandomiser();
+        //    PlayerUpgradeRandomiser();
+        //}
     }
 
     public void BaseRandomiser()

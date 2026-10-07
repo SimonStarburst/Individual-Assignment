@@ -32,55 +32,16 @@ public class PlayerStats : MonoBehaviour
 
     private void Awake()
     {
-        lvlUp = levelUpScreen.lvlScreen;
         maxHP = playerStats.baseHealth;
         playerHP = maxHP;
         moveStat = playerStats.baseSpeed;
         attackStat = playerStats.baseStrength;
-        playerLvl = 1;
-        totalExp = 0;
+
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
-    }
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        LevelUp();
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        // When Player collides with Game Object with tag "EXP", they will gain 1 EXP
-        if (collision.gameObject.CompareTag("EXP"))
-        {
-            totalExp += 1;
-            Debug.Log($"Total experience: {totalExp}");
-        }
-    }
-
-    private void LevelUp()
-    {
-        if (totalExp == 10 && playerLvl == 1)
-        {
-            // Activates levelUpScreen.LevelScreenActive(), which activates the UI and pauses the game until player
-            // picks 1 out of 3 HOPEFULLY randomized cards.
-
-            levelUpScreen.LevelScreenActive();
-            Debug.Log("Level 2!");
-            playerLvl += 1;
-        }
-
-        else if (totalExp == 25 && playerLvl == 2)
-        {
-            levelUpScreen.LevelScreenActive();
-            Debug.Log("Level 3!");
-            playerLvl += 1;
-        }
 
     }
 }
