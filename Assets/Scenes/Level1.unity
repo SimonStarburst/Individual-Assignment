@@ -279,7 +279,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 82281215}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 330828278}
+        m_TargetAssemblyTypeName: LevelUpMenuManager, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &82281215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -781,7 +793,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 298692556}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 330828278}
+        m_TargetAssemblyTypeName: LevelUpMenuManager, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &298692556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2456,7 +2480,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 667918012}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 330828278}
+        m_TargetAssemblyTypeName: LevelUpMenuManager, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &667918012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5950,6 +5986,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 60da12fedec29ce4b95867686b082416, type: 2}
   - {fileID: 11400000, guid: 83471a07e62dcd746a3ca79854b48ffd, type: 2}
   - {fileID: 11400000, guid: bef66acf8e8f0614586779736cb84a9e, type: 2}
+  selectedUpgrades: []
   acquiredUpgrades: []
 --- !u!1001 &7838078755418052615
 PrefabInstance:

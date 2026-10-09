@@ -13,18 +13,23 @@ public class LevelUpMenuManager : MonoBehaviour
     {
         pauseManager = GetComponent<PauseManager>();
         panel.SetActive(false);
-
     }
 
-
     public void OpenLevelUp(List<LvlUpCard> lvlUpData)
-    {
+    {        
+        pauseManager.PauseGame();
+        panel.SetActive(true);
         for (int i = 0; i < upgradeButtons.Count; i++)
         {
             upgradeButtons[i].Set(lvlUpData[i]);
         }
-        pauseManager.PauseGame();
-        panel.SetActive(true);
+    }
+
+    public void Upgrade(int pressedButton)
+    {
+        
+        Debug.Log("Player pressed :" + pressedButton.ToString());
+        CloseLevelUp();
     }
 
     public void CloseLevelUp()

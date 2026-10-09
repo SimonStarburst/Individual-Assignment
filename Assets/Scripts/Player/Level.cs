@@ -10,14 +10,14 @@ public class Level : MonoBehaviour
     private int totalEXP = 0;
 
     //[SerializeField] ExperienceBar experienceBar;
-    [SerializeField] LevelUpScreen levelUpScreen;
+    [SerializeField] private LevelUpScreen levelUpScreen;
 
-    [SerializeField] LevelUpMenuManager levelUpMenu;
+    [SerializeField] private LevelUpMenuManager levelUpMenu;
 
     //Pool of available upgrades
-    [SerializeField] List<LvlUpCard> upgrades;
-    List<LvlUpCard> selectedUpgrades;
-    [SerializeField] List<LvlUpCard> acquiredUpgrades;
+    [SerializeField] private List<LvlUpCard> upgrades;
+    public List<LvlUpCard> selectedUpgrades;
+    [SerializeField] private List<LvlUpCard> acquiredUpgrades;
 
     // The required experience to level up is the current player level times 100, so it will always require more exp.
     int LEVEL_UP
@@ -78,12 +78,10 @@ public class Level : MonoBehaviour
     private void LevelUp()
     {
         if (selectedUpgrades == null) { selectedUpgrades = new List<LvlUpCard>(); }
-        levelUpMenu.OpenLevelUp(GetUpgrades(3));
         selectedUpgrades.Clear();
         selectedUpgrades.AddRange(GetUpgrades(3));
 
-        levelUpScreen.LevelScreenActive(selectedUpgrades);
-
+        levelUpMenu.OpenLevelUp(selectedUpgrades);
         playerEXP -= LEVEL_UP;
         playerLvl += 1;
     }
