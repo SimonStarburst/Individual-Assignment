@@ -12,6 +12,8 @@ public class Level : MonoBehaviour
     //[SerializeField] ExperienceBar experienceBar;
     [SerializeField] LevelUpScreen levelUpScreen;
 
+    [SerializeField] LevelUpMenuManager levelUpMenu;
+
     //Pool of available upgrades
     [SerializeField] List<LvlUpCard> upgrades;
     List<LvlUpCard> selectedUpgrades;
@@ -66,6 +68,7 @@ public class Level : MonoBehaviour
     {
         if (playerEXP >= LEVEL_UP)
         {
+
             LevelUp();
         }
     }
@@ -75,7 +78,7 @@ public class Level : MonoBehaviour
     private void LevelUp()
     {
         if (selectedUpgrades == null) { selectedUpgrades = new List<LvlUpCard>(); }
-
+        levelUpMenu.OpenLevelUp(GetUpgrades(3));
         selectedUpgrades.Clear();
         selectedUpgrades.AddRange(GetUpgrades(3));
 
