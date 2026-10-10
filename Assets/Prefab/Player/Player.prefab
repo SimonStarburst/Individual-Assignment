@@ -286,6 +286,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5729f657e0423a443ae6749521844880, type: 2}
   - {fileID: 11400000, guid: d1bb61911aefcfd458cd3995362fe16b, type: 2}
   - {fileID: 11400000, guid: 977343bf0b568fa4e8af2477b0671e32, type: 2}
+  - {fileID: 11400000, guid: 30123dfa7b1c9974a9ff0391820a904c, type: 2}
+  - {fileID: 11400000, guid: afdc8e2c491f14c4c89bb52861e212ee, type: 2}
   - {fileID: 11400000, guid: bef66acf8e8f0614586779736cb84a9e, type: 2}
   - {fileID: 11400000, guid: 7eb10fe37337be34aa1c40213f18589d, type: 2}
   - {fileID: 11400000, guid: a275124f6bdec3140a050b5045ef0e10, type: 2}
@@ -431,8 +433,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   playerMovement: {fileID: 1952925944396099562}
-  cooldown: 3
   abilityTimer: 0
+  cooldown: 3
+  damage: 0
+  size: 0
 --- !u!1 &7449248626332697784
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,6 +447,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3250508286657423394}
   - component: {fileID: 8809804976255400007}
+  - component: {fileID: 3279387894838424843}
   m_Layer: 3
   m_Name: Aura
   m_TagString: Untagged
@@ -525,3 +530,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!114 &3279387894838424843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7449248626332697784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edea71cbde114244587be6a41f9841a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  isEquipped: 0
+  abilityTimer: 0
+  cooldown: 6
+  damage: 0
+  size: 0
