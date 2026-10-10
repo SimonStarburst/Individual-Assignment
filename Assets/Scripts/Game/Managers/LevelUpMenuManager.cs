@@ -15,20 +15,15 @@ public class LevelUpMenuManager : MonoBehaviour
         panel.SetActive(false);
     }
 
-    public void OpenLevelUp(List<LvlUpCard> lvlUpData)
+    public void OpenLevelUp()
     {        
         pauseManager.PauseGame();
         panel.SetActive(true);
-        for (int i = 0; i < upgradeButtons.Count; i++)
-        {
-            upgradeButtons[i].Set(lvlUpData[i]);
-        }
+
     }
 
     public void Upgrade(int pressedButton)
     {
-        
-        Debug.Log("Player pressed :" + pressedButton.ToString());
         CloseLevelUp();
     }
 
