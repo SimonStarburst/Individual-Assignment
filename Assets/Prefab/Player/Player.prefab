@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7576468092125415852}
   - component: {fileID: 9070195231522010199}
   - component: {fileID: 1952925944396099562}
+  - component: {fileID: 4463177494490084843}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -262,6 +263,35 @@ MonoBehaviour:
   left: 0
   right: 0
   moveSpeed: 6
+--- !u!114 &4463177494490084843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419331896443690039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 965866516eda18d4cbbfbb153c225251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelUpManager
+  levelUpMenu: {fileID: 0}
+  upgradeButton1: {fileID: 0}
+  upgradeButton2: {fileID: 0}
+  upgradeButton3: {fileID: 0}
+  upgrades:
+  - {fileID: 11400000, guid: 83471a07e62dcd746a3ca79854b48ffd, type: 2}
+  - {fileID: 11400000, guid: 60da12fedec29ce4b95867686b082416, type: 2}
+  - {fileID: 11400000, guid: 45a5eef8ef10ffd448ae69d240211ccd, type: 2}
+  - {fileID: 11400000, guid: 5729f657e0423a443ae6749521844880, type: 2}
+  - {fileID: 11400000, guid: d1bb61911aefcfd458cd3995362fe16b, type: 2}
+  - {fileID: 11400000, guid: 977343bf0b568fa4e8af2477b0671e32, type: 2}
+  - {fileID: 11400000, guid: bef66acf8e8f0614586779736cb84a9e, type: 2}
+  - {fileID: 11400000, guid: 7eb10fe37337be34aa1c40213f18589d, type: 2}
+  - {fileID: 11400000, guid: a275124f6bdec3140a050b5045ef0e10, type: 2}
+  - {fileID: 11400000, guid: 1ea45f040bb838f469c322c2af7d5371, type: 2}
+  - {fileID: 11400000, guid: bec792baebdab684a837e06bee4b0c6c, type: 2}
+  - {fileID: 11400000, guid: f5fa884c90197434baeb48ea1f912a69, type: 2}
 --- !u!1 &625975629893216132
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,9 +352,9 @@ Transform:
   m_GameObject: {fileID: 2390480357404596382}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 0, z: 0}
+  m_LocalPosition: {x: -0.3, y: 0, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1920701488510304690}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -375,7 +405,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 80
+  m_SortingOrder: 100
   m_MaskInteraction: 0
   m_Sprite: {fileID: 8029492030938286802, guid: 9910f95e208a29b45bec2ec6d05049ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -482,7 +512,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 80
+  m_SortingOrder: 100
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.4764151, g: 1, b: 0.9707659, a: 0.20392157}

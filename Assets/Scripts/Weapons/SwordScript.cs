@@ -6,22 +6,25 @@ public class SwordScript : MonoBehaviour
     #region Variables
 
     [SerializeField] private PlayerMovement playerMovement;
-    public float cooldown;
 
-    public float abilityTimer;
 
     private Vector3 left = new Vector3 (-0.3f ,0f);
     private Vector3 right = new Vector3 (0.3f, 0f);
+
+    [Header("Sword Stats")]
+    public float abilityTimer;
+
+    // Affects how often the sword attacks
+    public float cooldown;
+
+    // Affects the damage of the sword
+    public float damage;
+
+    // Will affect size of sword
+    public float size;
+
     #endregion
 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         abilityTimer -= Time.deltaTime;

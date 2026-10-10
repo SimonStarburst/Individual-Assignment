@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a769372765963b41bcb9531fc0b4634, type: 3}
   m_Name: AuraDmgUp
   m_EditorClassIdentifier: Assembly-CSharp::LvlUpCard
-  levelUpUpgrade: 0
+  levelUpUpgrade: 1
   name: Aura Damage Up!
   description: Raises the damage of your Aura.
   lvlUpPicture: {fileID: 8101814991177344531, guid: ed4f928403161c74a8099318f3735cc1, type: 3}

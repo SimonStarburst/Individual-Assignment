@@ -25,8 +25,6 @@ public class PlayerStats : MonoBehaviour
     [Header("Player Level")]
     [SerializeField] private int playerLvl;
     [SerializeField] private int totalExp;
-
-    private bool lvlUp;
     #endregion
 
 
@@ -36,12 +34,7 @@ public class PlayerStats : MonoBehaviour
         playerHP = maxHP;
         moveStat = playerStats.baseSpeed;
         attackStat = playerStats.baseStrength;
-
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
 
-    }
 }

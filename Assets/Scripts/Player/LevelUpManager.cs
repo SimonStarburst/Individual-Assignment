@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class LevelUpManager : MonoBehaviour
 {
+    private PlayerStats playerStats;
     private int playerLvl = 1;
     private int playerEXP = 0;
     private int totalEXP = 0;
@@ -16,6 +17,11 @@ public class LevelUpManager : MonoBehaviour
     //Pool of available upgrades
     [SerializeField] private List<LvlUpCard> upgrades;
 
+
+    private void Awake()
+    {
+        playerStats = GetComponent<PlayerStats>();
+    }
 
     // The required experience to level up is the current player level times 100, so it will always require more exp.
     int LEVEL_UP
@@ -75,12 +81,10 @@ public class LevelUpManager : MonoBehaviour
     private void LevelUpOptionButton2()
     {
         upgradeButton2.Set(upgrades[Random.Range(0, upgrades.Count)]);
-
     }
 
     private void LevelUpOptionButton3()
     {
         upgradeButton3.Set(upgrades[Random.Range(0, upgrades.Count)]);
-
     }
 }

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a769372765963b41bcb9531fc0b4634, type: 3}
-  m_Name: MoveSpeedUp
+  m_Name: LaserCooldown
   m_EditorClassIdentifier: Assembly-CSharp::LvlUpCard
-  levelUpUpgrade: 2
-  name: Move Speed Up
-  description: Gotta go fast and whatnot!
-  lvlUpPicture: {fileID: -3230126372701174877, guid: 9854dcf129cbf88478c3b1a85b7c9e5a, type: 3}
+  levelUpUpgrade: 1
+  name: Laser cooldown down
+  description: Shoots the lasers more frequently!
+  lvlUpPicture: {fileID: 7679385156476096713, guid: e513002bd46a80943bce98cff9d40656, type: 3}
