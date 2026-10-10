@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a769372765963b41bcb9531fc0b4634, type: 3}
   m_Name: SwordSpeedUp
   m_EditorClassIdentifier: Assembly-CSharp::LvlUpCard
+  levelUpUpgrade: 0
   name: Sword Speed Up!
   description: Sword attacks happen more frequently.
-  lvlUpPicture: {fileID: 0}
+  lvlUpPicture: {fileID: 1298246307389038859, guid: 358574724501f8c43ac3545b4a3d49ad, type: 3}

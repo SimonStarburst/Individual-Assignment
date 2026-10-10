@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: OrbAreaUp
   m_EditorClassIdentifier: Assembly-CSharp::LvlUpCard
   levelUpUpgrade: 1
-  name: 
-  description: 
-  lvlUpPicture: {fileID: 0}
+  name: Orb area up
+  description: The orbs circle further away from the player!
+  lvlUpPicture: {fileID: -6125121645167016389, guid: 34fd42a341efe544dbd4d8c47d2781c6, type: 3}

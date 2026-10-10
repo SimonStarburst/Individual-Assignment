@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: MoveSpeedUp
   m_EditorClassIdentifier: Assembly-CSharp::LvlUpCard
   levelUpUpgrade: 0
-  name: Move Speed Up!
-  description: Gotta go fast and whatnot
+  name: Move Speed Up
+  description: Gotta go fast and whatnot!
   lvlUpPicture: {fileID: -3230126372701174877, guid: 9854dcf129cbf88478c3b1a85b7c9e5a, type: 3}

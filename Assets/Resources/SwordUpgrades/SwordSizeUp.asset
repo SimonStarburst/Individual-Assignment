@@ -15,4 +15,4 @@ MonoBehaviour:
   levelUpUpgrade: 0
   name: Sword Size Up!
   description: Sword is bigger, wow!
-  lvlUpPicture: {fileID: 0}
+  lvlUpPicture: {fileID: 1298246307389038859, guid: 358574724501f8c43ac3545b4a3d49ad, type: 3}

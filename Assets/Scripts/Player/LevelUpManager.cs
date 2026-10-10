@@ -9,6 +9,9 @@ public class LevelUpManager : MonoBehaviour
 
     [SerializeField] private LevelUpMenuManager levelUpMenu;
 
+    //Pool of available upgrades
+    [SerializeField] private List<LvlUpCard> upgrades;
+
     int LEVEL_UP
     {
         get
