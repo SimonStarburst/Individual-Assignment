@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a769372765963b41bcb9531fc0b4634, type: 3}
   m_Name: LaserBase
   m_EditorClassIdentifier: Assembly-CSharp::LvlUpCard
-  name: 'Weapo: Laser'
+  levelUpUpgrade: 0
+  name: 'Weapon: Laser'
   description: Shoots a laser towards enemies, damaging them on impact.
-  lvlUpPicture: {fileID: 0}
+  lvlUpPicture: {fileID: 7679385156476096713, guid: e513002bd46a80943bce98cff9d40656, type: 3}

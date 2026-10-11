@@ -12,7 +12,6 @@ public class PlayerStats : MonoBehaviour
     public PlayerMovement moveScript;
     public PlayerAttack attackScript;
     public Health playerHealth;
-    public LevelUpScreen levelUpScreen;
 
 
     [Header("Player Stats")]
