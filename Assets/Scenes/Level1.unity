@@ -196,6 +196,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectPool
   prefab: {fileID: 5424826031250005867, guid: 57930643254c757479db4c08c22983a2, type: 3}
   poolSize: 20
+  currentPoolSize: 0
+  maxPoolSize: 100
 --- !u!1 &82281212
 GameObject:
   m_ObjectHideFlags: 0
@@ -1014,6 +1016,7 @@ GameObject:
   - component: {fileID: 330828275}
   - component: {fileID: 330828277}
   - component: {fileID: 330828278}
+  - component: {fileID: 330828279}
   m_Layer: 0
   m_Name: ---GAMEMANAGER---
   m_TagString: Untagged
@@ -1078,6 +1081,18 @@ MonoBehaviour:
   - {fileID: 298692558}
   - {fileID: 667918014}
   - {fileID: 82281217}
+--- !u!114 &330828279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330828274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f71c1656d06054bbe101422a63decf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &422768321
 GameObject:
   m_ObjectHideFlags: 0
@@ -5110,13 +5125,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4540794034806730747, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
+      propertyPath: enemyManager
+      value: 
+      objectReference: {fileID: 1778683303}
     - target: {fileID: 7570037286266038863, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
       propertyPath: m_Name
       value: Enemy - Small, close
-      objectReference: {fileID: 0}
-    - target: {fileID: 7570037286266038863, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5395,6 +5410,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectPool
   prefab: {fileID: 5424826031250005867, guid: 57930643254c757479db4c08c22983a2, type: 3}
   poolSize: 20
+  currentPoolSize: 0
+  maxPoolSize: 100
 --- !u!1 &1685744017
 GameObject:
   m_ObjectHideFlags: 0
@@ -6081,6 +6098,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectPool
   prefab: {fileID: 7570037286266038863, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
   poolSize: 20
+  currentPoolSize: 0
+  maxPoolSize: 100
 --- !u!1 &1910330698
 GameObject:
   m_ObjectHideFlags: 0
@@ -6625,6 +6644,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectPool
   prefab: {fileID: 5424826031250005867, guid: 57930643254c757479db4c08c22983a2, type: 3}
   poolSize: 20
+  currentPoolSize: 0
+  maxPoolSize: 100
 --- !u!1001 &5375191573198627648
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6637,13 +6658,13 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 660047145}
+    - target: {fileID: 5436250430876360061, guid: 46c38b3114a2db14e8c27fd2442eb682, type: 3}
+      propertyPath: enemyManager
+      value: 
+      objectReference: {fileID: 1778683303}
     - target: {fileID: 5703298801508758842, guid: 46c38b3114a2db14e8c27fd2442eb682, type: 3}
       propertyPath: m_Name
       value: Enemy - Range, small
-      objectReference: {fileID: 0}
-    - target: {fileID: 5703298801508758842, guid: 46c38b3114a2db14e8c27fd2442eb682, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7593947538495854082, guid: 46c38b3114a2db14e8c27fd2442eb682, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6702,14 +6723,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy - Range, big
       objectReference: {fileID: 0}
-    - target: {fileID: 4343139310448740654, guid: 01bde735f676ece489d005fd42887643, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 5587684430480983795, guid: 01bde735f676ece489d005fd42887643, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 660047145}
+    - target: {fileID: 6230392575804249648, guid: 01bde735f676ece489d005fd42887643, type: 3}
+      propertyPath: enemyManager
+      value: 
+      objectReference: {fileID: 1778683303}
     - target: {fileID: 6591549450623039471, guid: 01bde735f676ece489d005fd42887643, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16
@@ -6844,10 +6865,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy - Close, big
       objectReference: {fileID: 0}
-    - target: {fileID: 5424826031250005867, guid: 57930643254c757479db4c08c22983a2, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 5776831429121168578, guid: 57930643254c757479db4c08c22983a2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -6888,10 +6905,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9016560968372455168, guid: 57930643254c757479db4c08c22983a2, type: 3}
-      propertyPath: player
+    - target: {fileID: 6335179053431742344, guid: 57930643254c757479db4c08c22983a2, type: 3}
+      propertyPath: enemyManager
       value: 
-      objectReference: {fileID: 660047145}
+      objectReference: {fileID: 1778683303}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -1,18 +1,24 @@
 using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine.Pool;
 
 public class ObjectPool : MonoBehaviour
 {
-    public GameObject prefab; // Prefab to pool from
-    public int poolSize = 10;
+    public GameObject prefab;       // Prefab to pool from
+    public int poolSize = 10;       // Amount of objects to be instantiated at start
+    public int currentPoolSize;     // Current amount in pool
+    public int maxPoolSize = 100;   // Max amount of enemies in pool
 
-    private List<GameObject> pool;
+    private List<GameObject> pool;  // List of pooled objects
 
     void Start()
     {
         //Initialize the object pool
         InitializePool();
+    }
+
+    private void Update()
+    {
+        currentPoolSize = pool.Count;
     }
 
     private void InitializePool()
@@ -25,7 +31,7 @@ public class ObjectPool : MonoBehaviour
         }
     }
 
-    public GameObject GetPooledObject()
+    public GameObject GetPooledObj()
     {
         foreach (GameObject obj in pool)
         {
@@ -46,5 +52,15 @@ public class ObjectPool : MonoBehaviour
         obj.SetActive(false);
         pool.Add(obj);
         return obj;
+    }
+
+    public void ReturnObj(GameObject obj)
+    {
+        // If there's more than 100 enemies in the pool, destroy the object that wants to be added
+        // if there's less than 100, add the enemy to the pool instead
+
+    
+            pool.Add(obj);
+
     }
 }

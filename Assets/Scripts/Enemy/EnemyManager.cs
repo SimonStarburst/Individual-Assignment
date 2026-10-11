@@ -39,8 +39,13 @@ public class EnemyManager : MonoBehaviour
     {
         Vector2 randomDirection = Random.insideUnitCircle.normalized;
         spawnPosition = target.transform.position + (Vector3)(randomDirection * spawnDistance);
-        GameObject enemy = closeSmallPool.GetPooledObject();
+        GameObject enemy = closeSmallPool.GetPooledObj();
         enemy.transform.position = spawnPosition;
         enemy.SetActive(true);
+    }
+
+    public void DestroyObject(GameObject enemy)
+    {
+        closeSmallPool.ReturnObj(enemy);
     }
 }

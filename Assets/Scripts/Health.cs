@@ -3,6 +3,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] private BaseStats baseStat;
+    [SerializeField] private EnemyManager enemyManager;
 
     public float maxHealth;
     public float currentHealth;
@@ -22,6 +23,18 @@ public class Health : MonoBehaviour
     public void TakeDamage(float amount)
     {
         currentHealth -= amount;
+        if (currentHealth <= 0)
+        {
+            Defeat();
+        }
+    }
+
+    private void Defeat()
+    {
+        if (currentHealth <= 0 && gameObject.CompareTag("Enemy"))
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

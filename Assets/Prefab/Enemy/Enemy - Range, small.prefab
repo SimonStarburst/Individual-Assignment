@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4334600530002642028}
   - component: {fileID: 1400026117931990911}
   - component: {fileID: 5436250430876360061}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy - Range, small
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -121,5 +121,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   baseStat: {fileID: 11400000, guid: dbb09d584d9788543b55566c18df9738, type: 2}
+  enemyManager: {fileID: 0}
   maxHealth: 0
   currentHealth: 0
