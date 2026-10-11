@@ -6,7 +6,9 @@ public class SwordScript : MonoBehaviour
     #region Variables
 
     [SerializeField] private PlayerMovement playerMovement;
-
+    public Animator animator;
+    private CapsuleCollider2D capsuleCollider;
+    public LayerMask enemyLayer;
 
     private Vector3 left = new Vector3 (-0.3f ,0f);
     private Vector3 right = new Vector3 (0.3f, 0f);
@@ -25,22 +27,53 @@ public class SwordScript : MonoBehaviour
 
     #endregion
 
+    private void Awake()
+    {
+        capsuleCollider = GetComponent<CapsuleCollider2D>();
+    }
+
     void Update()
     {
         abilityTimer -= Time.deltaTime;
         Direction();
-        CastAbility();
+        //CastAbility();
     }
 
-    public void CastAbility()
+    public void Attack()
     {
-        if (abilityTimer > 0)
+        if (abilityTimer <= 0)
         {
-            return;
+            animator.SetBool("isAttacking", true);
+            abilityTimer = cooldown;
+            Debug.Log("Swing sword!");
         }
-        abilityTimer = cooldown;
-        Debug.Log("Swing sword!");
+
     }
+
+    public void StopAttack()
+    {
+        animator.SetBool("isAttacking", false);
+
+    }
+
+    //public void CastAbility()
+    //{
+    //    if (abilityTimer > 0)
+    //    {
+    //        return;
+    //    }
+    //    abilityTimer = cooldown;
+    //    Debug.Log("Swing sword!");
+    //}
+
+    //public void DealDamage()
+    //{
+    //    Collider2D[] enemies = Physics2D.OverlapCapsuleAll(capsuleCollider.transform.position, enemyLayer);
+    //    if (enemies.Length > 0)
+    //    {
+    //        enemies[0].GetComponent<Health>().TakeDamage(damage);
+    //    }
+    //}
 
     public void Direction()
     {
@@ -56,4 +89,17 @@ public class SwordScript : MonoBehaviour
             gameObject.transform.position = playerMovement.transform.position + left;
         }
     }
+
+    //private void OnTriggerStay2D(Collider2D collision)
+    //{
+    //    if (collision.gameObject.tag == "Enemy")
+    //    {
+    //        Health enemyHealth = collision.GetComponent<Health>();
+    //        if (enemyHealth != null)
+    //        {
+    //            enemyHealth.TakeDamage(damage);
+    //        }
+    //        abilityTimer = cooldown;
+    //    }
+    //}
 }
