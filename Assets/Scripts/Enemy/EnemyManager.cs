@@ -35,7 +35,7 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
-    void SpawnObject()
+    private void SpawnObject()
     {
         Vector2 randomDirection = Random.insideUnitCircle.normalized;
         spawnPosition = target.transform.position + (Vector3)(randomDirection * spawnDistance);
@@ -43,4 +43,10 @@ public class EnemyManager : MonoBehaviour
         enemy.transform.position = spawnPosition;
         enemy.SetActive(true);
     }
+
+    public void StopSpawning()
+    {
+        StopCoroutine(SpawnEnemyCoroutine());
+    }
+
 }

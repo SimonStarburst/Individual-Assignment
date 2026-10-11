@@ -122,5 +122,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Health
   baseStat: {fileID: 11400000, guid: 0ce52e02693e36a45b9f3b99e218c444, type: 2}
   enemyManager: {fileID: 0}
+  gameOverManager: {fileID: 0}
   maxHealth: 0
   currentHealth: 0

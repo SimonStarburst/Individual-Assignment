@@ -4,6 +4,7 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private BaseStats baseStat;
     [SerializeField] private EnemyManager enemyManager;
+    [SerializeField] private GameOverManager gameOverManager;
 
     public float maxHealth;
     public float currentHealth;
@@ -29,10 +30,15 @@ public class Health : MonoBehaviour
 
     private void Defeat()
     {
-        if (currentHealth <= 0 && gameObject.CompareTag("Enemy"))
+        if (gameObject.CompareTag("Enemy"))
         {
             gameObject.SetActive(false);
         }
-
+        else if (gameObject.CompareTag("Player"))
+        {
+            gameOverManager.GameOver();            
+            gameObject.SetActive(false);
+            enemyManager.StopSpawning();
+        }
     }
 }
