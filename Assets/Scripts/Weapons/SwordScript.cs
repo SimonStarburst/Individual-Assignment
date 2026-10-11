@@ -8,7 +8,7 @@ public class SwordScript : MonoBehaviour
     [SerializeField] private PlayerMovement playerMovement;
     public Animator animator;
     private CapsuleCollider2D capsuleCollider;
-    public LayerMask enemyLayer;
+    private bool isAttacking;
 
     private Vector3 left = new Vector3 (-0.3f ,0f);
     private Vector3 right = new Vector3 (0.3f, 0f);
@@ -29,6 +29,7 @@ public class SwordScript : MonoBehaviour
 
     private void Awake()
     {
+        isAttacking = false;
         capsuleCollider = GetComponent<CapsuleCollider2D>();
     }
 
@@ -36,35 +37,25 @@ public class SwordScript : MonoBehaviour
     {
         abilityTimer -= Time.deltaTime;
         Direction();
-        //CastAbility();
+        Attack();
     }
 
     public void Attack()
     {
         if (abilityTimer <= 0)
         {
+            isAttacking = true;
             animator.SetBool("isAttacking", true);
             abilityTimer = cooldown;
             Debug.Log("Swing sword!");
         }
-
     }
 
     public void StopAttack()
     {
+        isAttacking = false;
         animator.SetBool("isAttacking", false);
-
     }
-
-    //public void CastAbility()
-    //{
-    //    if (abilityTimer > 0)
-    //    {
-    //        return;
-    //    }
-    //    abilityTimer = cooldown;
-    //    Debug.Log("Swing sword!");
-    //}
 
     //public void DealDamage()
     //{
@@ -90,16 +81,17 @@ public class SwordScript : MonoBehaviour
         }
     }
 
-    //private void OnTriggerStay2D(Collider2D collision)
-    //{
-    //    if (collision.gameObject.tag == "Enemy")
-    //    {
-    //        Health enemyHealth = collision.GetComponent<Health>();
-    //        if (enemyHealth != null)
-    //        {
-    //            enemyHealth.TakeDamage(damage);
-    //        }
-    //        abilityTimer = cooldown;
-    //    }
-    //}
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy" && isAttacking)
+        {
+            Health enemyHealth = collision.GetComponent<Health>();
+            if (enemyHealth != null)
+            {
+                enemyHealth.TakeDamage(damage);
+                Debug.Log("Enemy is taking " + damage + " damage");
+            }
+            abilityTimer = cooldown;
+        }
+    }
 }
