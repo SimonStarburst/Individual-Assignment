@@ -8,8 +8,6 @@ public class Health : MonoBehaviour
     public float maxHealth;
     public float currentHealth;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-
     private void Awake()
     {
         maxHealth = baseStat.baseHealth;
@@ -33,8 +31,8 @@ public class Health : MonoBehaviour
     {
         if (currentHealth <= 0 && gameObject.CompareTag("Enemy"))
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
-    }
 
+    }
 }

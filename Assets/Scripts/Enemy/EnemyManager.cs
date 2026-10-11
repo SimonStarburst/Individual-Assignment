@@ -43,9 +43,4 @@ public class EnemyManager : MonoBehaviour
         enemy.transform.position = spawnPosition;
         enemy.SetActive(true);
     }
-
-    public void DestroyObject(GameObject enemy)
-    {
-        closeSmallPool.ReturnObj(enemy);
-    }
 }

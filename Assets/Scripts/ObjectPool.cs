@@ -54,13 +54,4 @@ public class ObjectPool : MonoBehaviour
         return obj;
     }
 
-    public void ReturnObj(GameObject obj)
-    {
-        // If there's more than 100 enemies in the pool, destroy the object that wants to be added
-        // if there's less than 100, add the enemy to the pool instead
-
-    
-            pool.Add(obj);
-
-    }
 }

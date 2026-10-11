@@ -25,7 +25,6 @@ public class CloseAttack : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" && attackTimer > damageInterval)
         {
-            //var healthComponent = collision.GetComponent<Health>();
             Health playerHealth = collision.GetComponent<Health>();
             if (playerHealth != null)
             {
