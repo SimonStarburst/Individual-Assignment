@@ -7,7 +7,6 @@ public class SwordScript : MonoBehaviour
 
     [SerializeField] private PlayerMovement playerMovement;
     public Animator animator;
-    private CapsuleCollider2D capsuleCollider;
     private bool isAttacking;
 
     private Vector3 left = new Vector3 (-0.3f ,0f);
@@ -30,7 +29,6 @@ public class SwordScript : MonoBehaviour
     private void Awake()
     {
         isAttacking = false;
-        capsuleCollider = GetComponent<CapsuleCollider2D>();
     }
 
     void Update()
@@ -56,15 +54,6 @@ public class SwordScript : MonoBehaviour
         isAttacking = false;
         animator.SetBool("isAttacking", false);
     }
-
-    //public void DealDamage()
-    //{
-    //    Collider2D[] enemies = Physics2D.OverlapCapsuleAll(capsuleCollider.transform.position, enemyLayer);
-    //    if (enemies.Length > 0)
-    //    {
-    //        enemies[0].GetComponent<Health>().TakeDamage(damage);
-    //    }
-    //}
 
     public void Direction()
     {

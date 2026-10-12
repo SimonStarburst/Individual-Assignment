@@ -5458,10 +5458,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 889738388851251799, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
-      propertyPath: levelUpScreen
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1256219392025961595, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5518,6 +5514,10 @@ PrefabInstance:
       propertyPath: upgradeButton3
       value: 
       objectReference: {fileID: 82281217}
+    - target: {fileID: 9070195231522010199, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: enemyManager
+      value: 
+      objectReference: {fileID: 1778683303}
     - target: {fileID: 9070195231522010199, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
       propertyPath: gameOverManager
       value: 

@@ -4,6 +4,9 @@ public class AuraScript : MonoBehaviour
 {
     #region Variables
 
+    public Animator animator;
+    private bool isAttacking;
+
     [Header("Aura Stats")]
     public bool isEquipped;
 
