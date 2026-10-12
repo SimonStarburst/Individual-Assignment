@@ -2,20 +2,24 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private BaseStats baseStat;
-    [SerializeField] private EnemyManager enemyManager;
-    [SerializeField] private GameOverManager gameOverManager;
-    [SerializeField] private GameObject playerSprite;
-    [SerializeField] private GameObject playerWeapons;
-    [SerializeField] private HighScoreManager highScore;
+    #region Variables
+    public BaseStats baseStat;
+    public EnemyManager enemyManager;
+    public GameOverManager gameOverManager;
+    public GameObject playerSprite;
+    public GameObject playerWeapons;
+    public HighScoreManager highScore;
+    public EXPDrop expDrop;
 
 
     public float maxHealth;
     public float currentHealth;
+    #endregion
 
     private void Awake()
     {
         maxHealth = baseStat.baseHealth;
+        expDrop = GetComponent<EXPDrop>();
     }
 
     void Start()
@@ -26,26 +30,28 @@ public class Health : MonoBehaviour
     public void TakeDamage(float amount)
     {
         currentHealth -= amount;
-        if (currentHealth <= 0)
+        if (currentHealth <= 0 && gameObject.CompareTag("Enemy"))
         {
-            Defeat();
+            expDrop.SpawnEXP();
+            //highScore.EnemyScore(maxHealth);  
+            DefeatEnemy();
+        }
+        if (currentHealth <= 0 && gameObject.CompareTag("Player"))
+        {
+            DefeatPlayer();
         }
     }
 
-    private void Defeat()
+    private void DefeatEnemy()
     {
-        if (gameObject.CompareTag("Enemy"))
-        {
-            //highScore.EnemyScore(maxHealth);
-            gameObject.SetActive(false);
-        }
-        else if (gameObject.CompareTag("Player"))
-        {
-            gameOverManager.GameOver();
-            //gameObject.SetActive(false);
-            playerSprite.SetActive(false);
-            playerWeapons.SetActive(false);
-            enemyManager.StopSpawning();
-        }
+        gameObject.SetActive(false);
+    }
+
+    private void DefeatPlayer()
+    {
+        gameOverManager.GameOver();
+        playerSprite.SetActive(false);
+        playerWeapons.SetActive(false);
+        enemyManager.StopSpawning();
     }
 }

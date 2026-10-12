@@ -3,12 +3,15 @@ using System.Collections.Generic;
 
 public class ObjectPool : MonoBehaviour
 {
+    #region Variables
+
     public GameObject prefab;       // Prefab to pool from
-    public int poolSize = 10;       // Amount of objects to be instantiated at start
+    public int poolSize;       // Amount of objects to be instantiated at start
     public int currentPoolSize;     // Current amount in pool
     public int maxPoolSize = 100;   // Max amount of enemies in pool
 
     private List<GameObject> pool;  // List of pooled objects
+    #endregion
 
     void Start()
     {

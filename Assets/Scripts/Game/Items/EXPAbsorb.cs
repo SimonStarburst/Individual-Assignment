@@ -27,7 +27,6 @@ public class EXPAbsorb : MonoBehaviour
         if (collision.gameObject.CompareTag("EXPAbsorb"))
         {
             transform.position = Vector2.MoveTowards(transform.position, target.transform.position, (movementSpeed * Time.deltaTime));
-            Debug.Log("EXP moving towards player");
         }
     }
 }
