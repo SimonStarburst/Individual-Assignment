@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AuraScript : MonoBehaviour
@@ -6,6 +8,8 @@ public class AuraScript : MonoBehaviour
 
     public Animator animator;
     private bool isAttacking;
+
+    private List<Collider2D> enemies;
 
     [Header("Aura Stats")]
     public bool isEquipped;
@@ -25,6 +29,7 @@ public class AuraScript : MonoBehaviour
 
     private void Awake()
     {
+        enemies = new List<Collider2D>();
         isEquipped = false;
         gameObject.SetActive(false);
     }
@@ -36,17 +41,40 @@ public class AuraScript : MonoBehaviour
         TimeReset();
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy" && abilityTimer <= 0)
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            Health enemyHealth = collision.GetComponent<Health>();
-            if (enemyHealth != null)
+            enemies.Add(collision);
+        }
+    }
+
+
+
+    private void OnTriggerStay2D(Collider2D collisions)
+    {
+        if (collisions.gameObject.CompareTag("Enemy") && abilityTimer <= 0)
+        {
+            foreach (Collider2D collision in enemies)
             {
-                enemyHealth.TakeDamage(damage);
-                Debug.Log("Enemy is taking " + damage + " Aura damage");
+                Health enemyHealth = collision.GetComponent<Health>();
+                if (enemyHealth != null)
+                {
+                    enemyHealth.TakeDamage(damage);
+                    Debug.Log("Enemy is taking " + damage + " Aura damage");
+                }
+                abilityTimer = cooldown;
             }
-            abilityTimer = cooldown;
+
+
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            enemies.Remove(collision);
         }
     }
 
