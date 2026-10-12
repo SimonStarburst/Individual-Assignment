@@ -84,6 +84,7 @@ Transform:
   m_Children:
   - {fileID: 1920701488510304690}
   - {fileID: 1379989939341111278}
+  - {fileID: 6879430831762059462}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1608096443213318184
@@ -405,13 +406,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2390480357404596382}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.0051316596, w: 0.9999869}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.30008483, y: -0.016549319, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1920701488510304690}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.588}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3494424958395710661
 SpriteRenderer:
   serializedVersion: 3
@@ -488,7 +489,7 @@ MonoBehaviour:
   animator: {fileID: 575698267668864780}
   abilityTimer: 0
   cooldown: 3
-  damage: 10
+  damage: 2
   size: 0
 --- !u!70 &1592495533003091225
 CapsuleCollider2D:
@@ -549,6 +550,74 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &2677891965170738490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6879430831762059462}
+  - component: {fileID: 7172805848427733908}
+  m_Layer: 3
+  m_Name: EXPAbsorb
+  m_TagString: EXPAbsorb
+  m_Icon: {fileID: 2800000, guid: fd38c6c1c2963534a81ea44a132b6b32, type: 3}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6879430831762059462
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2677891965170738490}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1256219392025961595}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &7172805848427733908
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2677891965170738490}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
 --- !u!1 &6790125721775735358
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,7 +773,7 @@ GameObject:
   m_Icon: {fileID: 2800000, guid: ed4f928403161c74a8099318f3735cc1, type: 3}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3250508286657423394
 Transform:
   m_ObjectHideFlags: 0
@@ -796,7 +865,7 @@ MonoBehaviour:
   isEquipped: 0
   abilityTimer: 0
   cooldown: 6
-  damage: 0
+  damage: 1
   size: 0
 --- !u!58 &4875949842347880469
 CircleCollider2D:
@@ -842,7 +911,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7449248626332697784}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 14d61fd3ce1dd494fb3bc0eaaded58d3, type: 2}
   m_CullingMode: 0

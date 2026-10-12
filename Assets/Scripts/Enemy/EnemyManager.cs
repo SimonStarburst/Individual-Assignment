@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
+    #region Variables
 
     public ObjectPool closeSmallPool;
     public ObjectPool closeBigPool;
@@ -14,6 +15,7 @@ public class EnemyManager : MonoBehaviour
     public float spawnInterval = 1f;
     public float spawnDistance = 12f;
     public Vector2 spawnPosition;
+    #endregion
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

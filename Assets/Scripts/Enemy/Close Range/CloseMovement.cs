@@ -9,11 +9,6 @@ public class CloseMovement : MonoBehaviour
     private float movementSpeed;
     #endregion
 
-    private void Awake()
-    {
-        
-    }
-
     private void Start()
     {
         movementSpeed = enemyStats.baseSpeed;
