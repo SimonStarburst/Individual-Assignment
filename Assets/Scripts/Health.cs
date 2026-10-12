@@ -7,6 +7,8 @@ public class Health : MonoBehaviour
     [SerializeField] private GameOverManager gameOverManager;
     [SerializeField] private GameObject playerSprite;
     [SerializeField] private GameObject playerWeapons;
+    [SerializeField] private HighScoreManager highScore;
+
 
     public float maxHealth;
     public float currentHealth;
@@ -34,6 +36,7 @@ public class Health : MonoBehaviour
     {
         if (gameObject.CompareTag("Enemy"))
         {
+            //highScore.EnemyScore(maxHealth);
             gameObject.SetActive(false);
         }
         else if (gameObject.CompareTag("Player"))

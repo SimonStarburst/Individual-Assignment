@@ -926,6 +926,7 @@ GameObject:
   - component: {fileID: 330828277}
   - component: {fileID: 330828278}
   - component: {fileID: 330828279}
+  - component: {fileID: 330828280}
   m_Layer: 0
   m_Name: ---GAMEMANAGER---
   m_TagString: Untagged
@@ -1005,6 +1006,25 @@ MonoBehaviour:
   panel: {fileID: 803034965}
   pauseManager: {fileID: 330828277}
   enemyManager: {fileID: 1778683303}
+--- !u!114 &330828280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330828274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a80df0d2f3b06eb4db1221ef20c8e50c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  levelUpManager: {fileID: 1536994876}
+  timer: {fileID: 1275609592}
+  enemyScore: 0
+  playTime: 0
+  playerLevel: 0
+  totalScore: 0
+  finalScore: 0
 --- !u!1 &422768321
 GameObject:
   m_ObjectHideFlags: 0
@@ -3842,6 +3862,7 @@ GameObject:
   - component: {fileID: 1532163610}
   - component: {fileID: 1532163612}
   - component: {fileID: 1532163611}
+  - component: {fileID: 1532163613}
   m_Layer: 5
   m_Name: SCORE
   m_TagString: Untagged
@@ -3968,6 +3989,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532163609}
   m_CullTransparentMesh: 1
+--- !u!114 &1532163613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532163609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0860c588e92f2c458dc429aef7b21e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  scoreText: {fileID: 1532163611}
+  highScore: {fileID: 330828280}
 --- !u!1001 &1534500685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4017,6 +4052,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4540794034806730747, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
+      propertyPath: highScore
+      value: 
+      objectReference: {fileID: 330828280}
+    - target: {fileID: 4540794034806730747, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
       propertyPath: enemyManager
       value: 
       objectReference: {fileID: 1778683303}
@@ -4024,10 +4063,6 @@ PrefabInstance:
       propertyPath: gameOverManager
       value: 
       objectReference: {fileID: 330828279}
-    - target: {fileID: 5795896852471609654, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7570037286266038863, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
       propertyPath: m_Name
       value: Enemy - Small, close
@@ -4048,6 +4083,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20479684d807af947bf5309f7d497f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
+--- !u!114 &1536994876 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+  m_PrefabInstance: {fileID: 6986607547563751973}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527506040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 965866516eda18d4cbbfbb153c225251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelUpManager
 --- !u!1 &1549723779
 GameObject:
   m_ObjectHideFlags: 0
@@ -5262,6 +5308,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 660047145}
     - target: {fileID: 5436250430876360061, guid: 46c38b3114a2db14e8c27fd2442eb682, type: 3}
+      propertyPath: highScore
+      value: 
+      objectReference: {fileID: 330828280}
+    - target: {fileID: 5436250430876360061, guid: 46c38b3114a2db14e8c27fd2442eb682, type: 3}
       propertyPath: enemyManager
       value: 
       objectReference: {fileID: 1778683303}
@@ -5334,6 +5384,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 660047145}
+    - target: {fileID: 6230392575804249648, guid: 01bde735f676ece489d005fd42887643, type: 3}
+      propertyPath: highScore
+      value: 
+      objectReference: {fileID: 330828280}
     - target: {fileID: 6230392575804249648, guid: 01bde735f676ece489d005fd42887643, type: 3}
       propertyPath: enemyManager
       value: 
@@ -5520,6 +5574,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6335179053431742344, guid: 57930643254c757479db4c08c22983a2, type: 3}
+      propertyPath: highScore
+      value: 
+      objectReference: {fileID: 330828280}
     - target: {fileID: 6335179053431742344, guid: 57930643254c757479db4c08c22983a2, type: 3}
       propertyPath: enemyManager
       value: 
