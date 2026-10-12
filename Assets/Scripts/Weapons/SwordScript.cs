@@ -45,7 +45,6 @@ public class SwordScript : MonoBehaviour
             isAttacking = true;
             animator.SetBool("isAttacking", true);
             abilityTimer = cooldown;
-            Debug.Log("Swing sword!");
         }
     }
 
@@ -78,7 +77,7 @@ public class SwordScript : MonoBehaviour
             if (enemyHealth != null)
             {
                 enemyHealth.TakeDamage(damage);
-                Debug.Log("Enemy is taking " + damage + " damage");
+                Debug.Log("Enemy is taking " + damage + " Sword damage");
             }
             abilityTimer = cooldown;
         }

@@ -33,16 +33,28 @@ public class AuraScript : MonoBehaviour
     void Update()
     {
         abilityTimer -= Time.deltaTime;
-        CastAbility();
+        TimeReset();
     }
 
-    public void CastAbility()
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (abilityTimer > 0)
+        if (collision.gameObject.tag == "Enemy" && abilityTimer <= 0)
         {
-            return;
+            Health enemyHealth = collision.GetComponent<Health>();
+            if (enemyHealth != null)
+            {
+                enemyHealth.TakeDamage(damage);
+                Debug.Log("Enemy is taking " + damage + " Aura damage");
+            }
+            abilityTimer = cooldown;
         }
-        abilityTimer = cooldown;
-        Debug.Log("Aura Damage");
+    }
+
+    private void TimeReset()
+    {
+        if (abilityTimer < -0.1)
+        {
+            abilityTimer = cooldown;
+        }
     }
 }

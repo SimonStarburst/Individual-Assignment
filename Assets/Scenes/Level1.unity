@@ -5498,6 +5498,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1741028931973268019, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279387894838424843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
       propertyPath: levelUpMenu
       value: 
@@ -5514,6 +5522,14 @@ PrefabInstance:
       propertyPath: upgradeButton3
       value: 
       objectReference: {fileID: 82281217}
+    - target: {fileID: 7449248626332697784, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8674473203864074087, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: damage
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 9070195231522010199, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
       propertyPath: enemyManager
       value: 
