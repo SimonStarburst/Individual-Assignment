@@ -4024,6 +4024,10 @@ PrefabInstance:
       propertyPath: gameOverManager
       value: 
       objectReference: {fileID: 330828279}
+    - target: {fileID: 5795896852471609654, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7570037286266038863, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
       propertyPath: m_Name
       value: Enemy - Small, close
@@ -5451,10 +5455,6 @@ PrefabInstance:
       propertyPath: upgradeButton3
       value: 
       objectReference: {fileID: 82281217}
-    - target: {fileID: 7172805848427733908, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9070195231522010199, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
       propertyPath: enemyManager
       value: 
