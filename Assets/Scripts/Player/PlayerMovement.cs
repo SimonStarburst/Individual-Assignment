@@ -6,13 +6,14 @@ using System;
 public class PlayerMovement : MonoBehaviour
 {
     #region Variables
-    private Collider2D collider;
     private Rigidbody2D rb;
 
     [SerializeField] private PlayerStats playerStats;
+    private Camera cam;
 
     [Header("Movement")]
     public Vector2 moveInput;
+    private Vector2 mousePosition;
 
     public bool left;
     public bool right;
@@ -23,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        collider = GetComponent<Collider2D>();
+        cam = Camera.main;
     }
 
     void Start()
@@ -33,8 +34,16 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        rb.linearVelocity = moveInput * moveSpeed;      
+        //rb.linearVelocity = Vector2.MoveTowards(gameObject.transform.position, mousePosition, moveSpeed);
+        rb.linearVelocity = moveInput * moveSpeed;
         LastDirection();
+    }
+
+    void FixedUpdate()
+    {
+
+        Vector2 direction = mousePosition - rb.position;
+        rb.linearVelocity = direction.normalized * moveSpeed;
     }
 
     void OnMove(InputValue moveValue)
@@ -54,5 +63,10 @@ public class PlayerMovement : MonoBehaviour
             left = false;            
             right = true;
         }
+    }   
+    
+    public void OnMouseClick(InputValue clickValue)
+    {
+        mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
     }
 } 
