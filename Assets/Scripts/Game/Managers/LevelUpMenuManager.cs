@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class LevelUpMenuManager : MonoBehaviour
 {
+    #region Variables
     [SerializeField] GameObject panel;
     PauseManager pauseManager;
 
     [SerializeField] List<UpgradeButton> upgradeButtons;
-
+    #endregion
     private void Awake()
     {
         pauseManager = GetComponent<PauseManager>();

@@ -9,6 +9,7 @@ TagManager:
   - EXP
   - EXPAbsorb
   - EXPPool
+  - Managers
   layers:
   - Default
   - TransparentFX

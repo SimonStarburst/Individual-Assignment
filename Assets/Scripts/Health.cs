@@ -11,7 +11,6 @@ public class Health : MonoBehaviour
     public GameObject playerSprite;
     public GameObject playerWeapons;
     public HighScoreManager highScore;
-    public EXPDropManager expDropManager;
 
 
     public float maxHealth;

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOverManager : MonoBehaviour
 {
@@ -16,6 +17,18 @@ public class GameOverManager : MonoBehaviour
     {
         pauseManager.PauseGame();
         panel.SetActive(true);
+    }
+
+    public void RestartButton()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
+    }
+
+    public void QuitButton()
+    {
+        SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1f;
     }
 
 }
