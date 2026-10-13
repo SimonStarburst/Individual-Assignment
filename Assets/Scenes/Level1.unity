@@ -4162,6 +4162,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1778683303}
     - target: {fileID: 4540794034806730747, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
+      propertyPath: expDropManager
+      value: 
+      objectReference: {fileID: 330828281}
+    - target: {fileID: 4540794034806730747, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
       propertyPath: gameOverManager
       value: 
       objectReference: {fileID: 330828279}
