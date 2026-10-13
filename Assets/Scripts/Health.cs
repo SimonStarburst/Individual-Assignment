@@ -1,3 +1,5 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Health : MonoBehaviour
@@ -9,7 +11,7 @@ public class Health : MonoBehaviour
     public GameObject playerSprite;
     public GameObject playerWeapons;
     public HighScoreManager highScore;
-    public EXPDrop expDrop;
+    public EXPDropManager expDropManager;
 
 
     public float maxHealth;
@@ -19,7 +21,6 @@ public class Health : MonoBehaviour
     private void Awake()
     {
         maxHealth = baseStat.baseHealth;
-        expDrop = GetComponent<EXPDrop>();
     }
 
     void Start()
@@ -32,8 +33,6 @@ public class Health : MonoBehaviour
         currentHealth -= amount;
         if (currentHealth <= 0 && gameObject.CompareTag("Enemy"))
         {
-            expDrop.SpawnEXP();
-            //highScore.EnemyScore(maxHealth);  
             DefeatEnemy();
         }
         if (currentHealth <= 0 && gameObject.CompareTag("Player"))
@@ -54,4 +53,7 @@ public class Health : MonoBehaviour
         playerWeapons.SetActive(false);
         enemyManager.StopSpawning();
     }
+
+
+
 }

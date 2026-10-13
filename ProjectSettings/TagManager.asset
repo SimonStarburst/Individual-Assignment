@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - EXP
   - EXPAbsorb
+  - EXPPool
   layers:
   - Default
   - TransparentFX

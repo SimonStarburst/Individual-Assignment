@@ -144,4 +144,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EXPDrop
   expPool: {fileID: 0}
   dropDistance: 0
+  expPooler: {fileID: 0}
   dropPosition: {x: 0, y: 0}

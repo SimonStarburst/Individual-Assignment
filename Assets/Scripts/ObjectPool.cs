@@ -33,7 +33,6 @@ public class ObjectPool : MonoBehaviour
             CreateNewObj();
         }
     }
-
     public GameObject GetPooledObj()
     {
         foreach (GameObject obj in pool)
@@ -47,8 +46,6 @@ public class ObjectPool : MonoBehaviour
         // If there's no inactive object in the pool, create a new object and adds it to the pool
         return CreateNewObj();
     }
-
-
     private GameObject CreateNewObj()
     {
         GameObject obj = Instantiate(prefab, transform);

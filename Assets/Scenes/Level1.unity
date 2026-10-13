@@ -499,7 +499,7 @@ GameObject:
   - component: {fileID: 92538976}
   m_Layer: 0
   m_Name: EXPPool
-  m_TagString: Untagged
+  m_TagString: EXPPool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -976,8 +976,9 @@ GameObject:
   - component: {fileID: 330828278}
   - component: {fileID: 330828279}
   - component: {fileID: 330828280}
+  - component: {fileID: 330828281}
   m_Layer: 0
-  m_Name: ---GAMEMANAGER---
+  m_Name: GAMEMANAGER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1074,6 +1075,22 @@ MonoBehaviour:
   playerLevel: 0
   totalScore: 0
   finalScore: 0
+--- !u!114 &330828281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330828274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a70775ef01279dd49b27bba01a0dc2eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  expPool: {fileID: 92538976}
+  dropDistance: 0
+  dropTarget: {fileID: 0}
+  dropPosition: {x: 0, y: 0}
 --- !u!1 &422768321
 GameObject:
   m_ObjectHideFlags: 0
@@ -4133,6 +4150,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4540794034806730747, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
+      propertyPath: expDrop
+      value: 
+      objectReference: {fileID: 330828281}
+    - target: {fileID: 4540794034806730747, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
       propertyPath: highScore
       value: 
       objectReference: {fileID: 330828280}
@@ -4152,6 +4173,10 @@ PrefabInstance:
       propertyPath: expPool
       value: 
       objectReference: {fileID: 92538976}
+    - target: {fileID: 8322449336727557185, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
+      propertyPath: expPooler
+      value: 
+      objectReference: {fileID: 92538974}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5452,6 +5477,10 @@ PrefabInstance:
       propertyPath: expPool
       value: 
       objectReference: {fileID: 92538976}
+    - target: {fileID: 7896414969322278880, guid: 46c38b3114a2db14e8c27fd2442eb682, type: 3}
+      propertyPath: expPooler
+      value: 
+      objectReference: {fileID: 511398166}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5529,6 +5558,10 @@ PrefabInstance:
       propertyPath: expPool
       value: 
       objectReference: {fileID: 92538976}
+    - target: {fileID: 8285505776809779705, guid: 01bde735f676ece489d005fd42887643, type: 3}
+      propertyPath: expPooler
+      value: 
+      objectReference: {fileID: 511398166}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5667,6 +5700,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6335179053431742344, guid: 57930643254c757479db4c08c22983a2, type: 3}
+      propertyPath: expDrop
+      value: 
+      objectReference: {fileID: 330828281}
     - target: {fileID: 6335179053431742344, guid: 57930643254c757479db4c08c22983a2, type: 3}
       propertyPath: highScore
       value: 

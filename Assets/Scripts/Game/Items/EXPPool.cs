@@ -9,21 +9,16 @@ public class EXPPool : MonoBehaviour
     public int poolSize;       // Amount of objects to be instantiated at start
     public int currentPoolSize;     // Current amount in pool
     public int maxPoolSize = 100;   // Max amount of enemies in pool
-    private Health enemyHealth;
 
     private List<GameObject> pool;  // List of pooled objects
-
     #endregion
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        enemyHealth = GetComponent<Health>();        
         //Initialize the object pool
         InitializePool();
     }
 
-    // Update is called once per frame
     void Update()
     {
         currentPoolSize = pool.Count;
@@ -51,8 +46,6 @@ public class EXPPool : MonoBehaviour
         // If there's no inactive object in the pool, create a new object and adds it to the pool
         return CreateNewObj();
     }
-
-
     private GameObject CreateNewObj()
     {
         GameObject obj = Instantiate(prefab, transform);
