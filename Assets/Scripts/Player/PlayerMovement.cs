@@ -34,16 +34,16 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        //rb.linearVelocity = Vector2.MoveTowards(gameObject.transform.position, mousePosition, moveSpeed);
-        rb.linearVelocity = moveInput * moveSpeed;
+
+        rb.linearVelocity = moveInput * moveSpeed;        
+        //MouseMovement();
         LastDirection();
     }
 
     void FixedUpdate()
     {
 
-        Vector2 direction = mousePosition - rb.position;
-        rb.linearVelocity = direction.normalized * moveSpeed;
+
     }
 
     void OnMove(InputValue moveValue)
@@ -65,8 +65,15 @@ public class PlayerMovement : MonoBehaviour
         }
     }   
     
-    public void OnMouseClick(InputValue clickValue)
-    {
-        mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-    }
-} 
+    //public void OnMouseClick(InputValue clickValue)
+    //{
+    //    mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+    //}
+
+    //public void MouseMovement()
+    //{
+    //    //rb.linearVelocity = Vector2.MoveTowards(gameObject.transform.position, mousePosition, moveSpeed);
+    //    Vector2 direction = mousePosition - rb.position;
+    //    rb.linearVelocity = direction.normalized * moveSpeed;
+    //}
+}
