@@ -4559,10 +4559,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4540794034806730747, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
-      propertyPath: expDrop
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4540794034806730747, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
       propertyPath: highScore
       value: 
       objectReference: {fileID: 330828280}
@@ -4571,16 +4567,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1778683303}
     - target: {fileID: 4540794034806730747, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
-      propertyPath: expDropManager
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4540794034806730747, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
       propertyPath: gameOverManager
       value: 
       objectReference: {fileID: 330828279}
     - target: {fileID: 7570037286266038863, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
       propertyPath: m_Name
-      value: Enemy - Small, close
+      value: Enemy - Close, small
       objectReference: {fileID: 0}
     - target: {fileID: 8322449336727557185, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
       propertyPath: expPool

@@ -52,7 +52,4 @@ public class Health : MonoBehaviour
         playerWeapons.SetActive(false);
         enemyManager.StopSpawning();
     }
-
-
-
 }

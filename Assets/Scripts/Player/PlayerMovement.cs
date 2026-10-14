@@ -13,18 +13,30 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Movement")]
     public Vector2 moveInput;
-    private Vector2 mousePosition;
 
+    private Vector2 direction;
+    public float moveSpeed;
+
+    [Header("Positions")]
+    public Vector2 mousePosition;
+    public Vector2 playerPosition;
+
+
+    [Header("Boleans")]
     public bool left;
     public bool right;
+    public bool mouseControl;
+    public bool keyboardControl;
 
-    public float moveSpeed;
+
     #endregion
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         cam = Camera.main;
+        mouseControl = false;
+        keyboardControl = false;
     }
 
     void Start()
@@ -34,16 +46,15 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-
-        rb.linearVelocity = moveInput * moveSpeed;        
-        //MouseMovement();
-        LastDirection();
-    }
-
-    void FixedUpdate()
-    {
-
-
+        playerPosition = gameObject.transform.position;
+        rb.linearVelocity = moveInput * moveSpeed;
+        LastDirectionKeyboard();        
+        //If - sats that looks for if mouse or keyboard was most recently used to decide which move
+        // controls should be used
+        if (mouseControl)
+        {
+            MouseMovement();
+        }
     }
 
     void OnMove(InputValue moveValue)
@@ -51,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
         moveInput = moveValue.Get<Vector2>();
     }
 
-    public void LastDirection()
+    public void LastDirectionKeyboard()
     {
         if (moveInput.x == -1f)
         {
@@ -63,17 +74,40 @@ public class PlayerMovement : MonoBehaviour
             left = false;            
             right = true;
         }
-    }   
-    
-    //public void OnMouseClick(InputValue clickValue)
-    //{
-    //    mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-    //}
+    }
 
-    //public void MouseMovement()
-    //{
-    //    //rb.linearVelocity = Vector2.MoveTowards(gameObject.transform.position, mousePosition, moveSpeed);
-    //    Vector2 direction = mousePosition - rb.position;
-    //    rb.linearVelocity = direction.normalized * moveSpeed;
-    //}
+    public void LastDirectionMouse()
+    {
+        if (mousePosition.x < playerPosition.x)
+        {
+            right = false;
+            left = true;
+        }
+        else if (mousePosition.x > playerPosition.x)
+        {
+            left = false;
+            right = true;
+        }
+    }
+
+    public void OnMouseClick(InputValue clickValue)
+    {
+        mouseControl = true;
+        mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        Debug.Log(mousePosition);
+    }
+
+    public void MouseMovement()
+    {      
+        LastDirectionMouse();
+        direction = mousePosition - rb.position;
+        rb.linearVelocity = direction.normalized * moveSpeed;
+
+        //// If Player is getting close to mousePosition, stop their movement
+        if (mouseControl && Vector2.Distance(playerPosition, mousePosition) < 1f)
+        {
+            Debug.Log("Destination reached");            
+            mouseControl = false;
+        }
+    }
 }

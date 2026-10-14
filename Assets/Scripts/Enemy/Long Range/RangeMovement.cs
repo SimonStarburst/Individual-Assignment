@@ -4,7 +4,7 @@ public class RangeMovement : MonoBehaviour
 {
     #region Variables
 
-    [SerializeField] private Transform player;
+    private GameObject target;
 
     [SerializeField] private BaseStats enemyStats;
     private float movementSpeed;
@@ -27,7 +27,13 @@ public class RangeMovement : MonoBehaviour
 
     private void Movement()
     {
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, (movementSpeed * Time.deltaTime));
+        target = GameObject.FindGameObjectWithTag("Player");
+        transform.position = Vector2.MoveTowards(transform.position, target.transform.position, (movementSpeed * Time.deltaTime));
+        if (Vector2.Distance(gameObject.transform.position, target.transform.position) < 10f)
+        {
+            Debug.Log("Enemy shoots!");
+        }
+
     }
 
 }
