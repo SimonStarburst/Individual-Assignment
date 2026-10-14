@@ -6100,6 +6100,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy - Range, small
       objectReference: {fileID: 0}
+    - target: {fileID: 6748605231672789900, guid: 46c38b3114a2db14e8c27fd2442eb682, type: 3}
+      propertyPath: bulletInterval
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7593947538495854082, guid: 46c38b3114a2db14e8c27fd2442eb682, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8

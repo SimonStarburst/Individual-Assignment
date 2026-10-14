@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class RangeAttack : MonoBehaviour
@@ -7,7 +8,8 @@ public class RangeAttack : MonoBehaviour
     public GameObject bulletSpawnObject;
     public BulletSpawner bulletSpawner;
 
-
+    [SerializeField] private float bulletInterval;
+    public float attackTimer = 0f;
 
     private RangeMovement movement;
 
@@ -20,17 +22,33 @@ public class RangeAttack : MonoBehaviour
         bulletSpawner = bulletSpawnObject.GetComponentInChildren<BulletSpawner>();
     }
 
-    // Update is called once per frame
+    private void Start()
+    {
+        //StartCoroutine(SpawnBulletCoroutine());
+    }
+
     void Update()
     {
+        attackTimer += Time.deltaTime;
         Attacking();
     }
 
+    //IEnumerator SpawnBulletCoroutine()
+    //{
+    //    if (movement.shootingRange == true)
+    //    {            
+    //        yield return new WaitForSeconds(1);
+    //        bulletSpawner.SpawnObject();
+    //        Debug.Log("Bullet Shot!");
+    //    }
+    //}
+
     private void Attacking()
     {
-        if (movement.shootingRange == true)
+        if (movement.shootingRange == true && attackTimer > bulletInterval)
         {
             bulletSpawner.SpawnObject();
+            Debug.Log("Bullet Shot!");
         }
     }
 }

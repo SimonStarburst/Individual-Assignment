@@ -22,8 +22,6 @@ public class BulletSpawner : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player");
     }
 
-
-
     public void SpawnObject()
     {
         // Aims in on where the Player is at the point of this being called
