@@ -141,7 +141,6 @@ MonoBehaviour:
   playerSprite: {fileID: 0}
   playerWeapons: {fileID: 0}
   highScore: {fileID: 0}
-  expDrop: {fileID: 8254825166898265401}
   maxHealth: 0
   currentHealth: 0
 --- !u!61 &4666802688099483183
@@ -204,6 +203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EXPDrop
   expPool: {fileID: 0}
   dropDistance: 0
+  dropTarget: {fileID: 0}
   expPooler: {fileID: 0}
   dropPosition: {x: 0, y: 0}
 --- !u!114 &2271677694864451999

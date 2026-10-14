@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class CloseAttack : MonoBehaviour
 {
+    #region Variables
     [SerializeField] private BaseStats attackStat;
     private float damage;
     public float damageInterval = 0.5f;
     public float attackTimer = 0f;
-
+    #endregion
     private void Awake()
     {
         damage = attackStat.baseStrength;
@@ -23,7 +24,7 @@ public class CloseAttack : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && attackTimer > damageInterval)
+        if (collision.gameObject.CompareTag("Player") && attackTimer > damageInterval)
         {
             Health playerHealth = collision.GetComponent<Health>();
             if (playerHealth != null)

@@ -10,6 +10,8 @@ TagManager:
   - EXPAbsorb
   - EXPPool
   - Managers
+  - BulletSpawner
+  - Wall
   layers:
   - Default
   - TransparentFX
