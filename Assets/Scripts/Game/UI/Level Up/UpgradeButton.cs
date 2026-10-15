@@ -4,9 +4,9 @@ using UnityEngine.UI;
 
 public class UpgradeButton : MonoBehaviour
 {
-    [SerializeField] Image icon;
-    [SerializeField] TMP_Text nameText;
-    [SerializeField] TMP_Text descriptionText;
+    public Image icon;
+    public TMP_Text nameText;
+    public TMP_Text descriptionText;
 
 
     public void Set(LvlUpCard lvlData)

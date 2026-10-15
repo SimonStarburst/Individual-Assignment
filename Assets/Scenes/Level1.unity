@@ -6278,6 +6278,118 @@ PrefabInstance:
       propertyPath: upgradeButton3
       value: 
       objectReference: {fileID: 82281217}
+    - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: upgrades.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: orbUpgrades.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: 'upgrades.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 83471a07e62dcd746a3ca79854b48ffd, type: 2}
+    - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: 'upgrades.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 45a5eef8ef10ffd448ae69d240211ccd, type: 2}
+    - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: 'upgrades.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 60da12fedec29ce4b95867686b082416, type: 2}
+    - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: 'upgrades.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 977343bf0b568fa4e8af2477b0671e32, type: 2}
+    - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: 'upgrades.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: bef66acf8e8f0614586779736cb84a9e, type: 2}
+    - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: 'upgrades.Array.data[5]'
+      value: 
+      objectReference: {fileID: 11400000, guid: bec792baebdab684a837e06bee4b0c6c, type: 2}
+    - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: 'upgrades.Array.data[6]'
+      value: 
+      objectReference: {fileID: 11400000, guid: f5fa884c90197434baeb48ea1f912a69, type: 2}
+    - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: 'upgrades.Array.data[7]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 83471a07e62dcd746a3ca79854b48ffd, type: 2}
+    - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: 'upgrades.Array.data[8]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 45a5eef8ef10ffd448ae69d240211ccd, type: 2}
+    - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: 'upgrades.Array.data[9]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 60da12fedec29ce4b95867686b082416, type: 2}
+    - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: auraUpgrades.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: 'upgrades.Array.data[10]'
+      value: 
+      objectReference: {fileID: 11400000, guid: f5fa884c90197434baeb48ea1f912a69, type: 2}
+    - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: 'upgrades.Array.data[11]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 83471a07e62dcd746a3ca79854b48ffd, type: 2}
+    - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: 'upgrades.Array.data[12]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 60da12fedec29ce4b95867686b082416, type: 2}
+    - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: 'upgrades.Array.data[13]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 45a5eef8ef10ffd448ae69d240211ccd, type: 2}
+    - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: baseAbilities.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: laserUpgrades.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: 'orbUpgrades.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 7eb10fe37337be34aa1c40213f18589d, type: 2}
+    - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: 'orbUpgrades.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: a275124f6bdec3140a050b5045ef0e10, type: 2}
+    - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: 'auraUpgrades.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 5729f657e0423a443ae6749521844880, type: 2}
+    - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: 'auraUpgrades.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: d1bb61911aefcfd458cd3995362fe16b, type: 2}
+    - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: 'baseAbilities.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 83471a07e62dcd746a3ca79854b48ffd, type: 2}
+    - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: 'baseAbilities.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 45a5eef8ef10ffd448ae69d240211ccd, type: 2}
+    - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: 'baseAbilities.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 60da12fedec29ce4b95867686b082416, type: 2}
+    - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: 'laserUpgrades.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 30123dfa7b1c9974a9ff0391820a904c, type: 2}
+    - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: 'laserUpgrades.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: afdc8e2c491f14c4c89bb52861e212ee, type: 2}
     - target: {fileID: 5153498226807135862, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
       propertyPath: m_Camera
       value: 
