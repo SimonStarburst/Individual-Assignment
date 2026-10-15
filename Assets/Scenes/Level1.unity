@@ -281,11 +281,12 @@ Transform:
   m_GameObject: {fileID: 43670576}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.52925, y: -14.28907, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 511398167}
+  - {fileID: 1869952695}
+  - {fileID: 92538975}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &79659878
@@ -512,12 +513,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 92538974}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 511398167}
+  m_Father: {fileID: 43670577}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &92538976
 MonoBehaviour:
@@ -1090,7 +1091,7 @@ MonoBehaviour:
   expPool: {fileID: 92538976}
   dropDistance: 0
   dropTarget: {fileID: 0}
-  dropPosition: {x: 0, y: 0}
+  spawnPosition: {x: 0, y: 0}
 --- !u!1 &398551774
 GameObject:
   m_ObjectHideFlags: 0
@@ -1584,38 +1585,6 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1863969834}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &511398166
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 511398167}
-  m_Layer: 0
-  m_Name: EXP
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &511398167
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 511398166}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 92538975}
-  m_Father: {fileID: 43670577}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &515188550
 GameObject:
@@ -4643,10 +4612,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4540794034806730747, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
-      propertyPath: highScore
-      value: 
-      objectReference: {fileID: 330828280}
-    - target: {fileID: 4540794034806730747, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
       propertyPath: enemyManager
       value: 
       objectReference: {fileID: 1778683303}
@@ -4658,14 +4623,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy - Close, small
       objectReference: {fileID: 0}
-    - target: {fileID: 8322449336727557185, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
-      propertyPath: expPool
-      value: 
-      objectReference: {fileID: 92538976}
-    - target: {fileID: 8322449336727557185, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
-      propertyPath: expPooler
-      value: 
-      objectReference: {fileID: 92538974}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5479,6 +5436,54 @@ Transform:
   - {fileID: 1377684073}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1869952694
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1869952695}
+  - component: {fileID: 1869952696}
+  m_Layer: 0
+  m_Name: EXPSpawner
+  m_TagString: EXPSpawner
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1869952695
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869952694}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 43670577}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1869952696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869952694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a70775ef01279dd49b27bba01a0dc2eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EXPDrop
+  expPool: {fileID: 92538976}
+  dropDistance: 0
+  dropTarget: {fileID: 0}
+  spawnPosition: {x: 0, y: 0}
 --- !u!1 &1884748472
 GameObject:
   m_ObjectHideFlags: 0
@@ -6084,10 +6089,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5436250430876360061, guid: 46c38b3114a2db14e8c27fd2442eb682, type: 3}
-      propertyPath: highScore
-      value: 
-      objectReference: {fileID: 330828280}
-    - target: {fileID: 5436250430876360061, guid: 46c38b3114a2db14e8c27fd2442eb682, type: 3}
       propertyPath: enemyManager
       value: 
       objectReference: {fileID: 1778683303}
@@ -6098,10 +6099,6 @@ PrefabInstance:
     - target: {fileID: 5703298801508758842, guid: 46c38b3114a2db14e8c27fd2442eb682, type: 3}
       propertyPath: m_Name
       value: Enemy - Range, small
-      objectReference: {fileID: 0}
-    - target: {fileID: 6748605231672789900, guid: 46c38b3114a2db14e8c27fd2442eb682, type: 3}
-      propertyPath: bulletInterval
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7593947538495854082, guid: 46c38b3114a2db14e8c27fd2442eb682, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6143,14 +6140,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7896414969322278880, guid: 46c38b3114a2db14e8c27fd2442eb682, type: 3}
-      propertyPath: expPool
-      value: 
-      objectReference: {fileID: 92538976}
-    - target: {fileID: 7896414969322278880, guid: 46c38b3114a2db14e8c27fd2442eb682, type: 3}
-      propertyPath: expPooler
-      value: 
-      objectReference: {fileID: 511398166}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6168,10 +6157,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy - Range, big
       objectReference: {fileID: 0}
-    - target: {fileID: 6230392575804249648, guid: 01bde735f676ece489d005fd42887643, type: 3}
-      propertyPath: highScore
-      value: 
-      objectReference: {fileID: 330828280}
     - target: {fileID: 6230392575804249648, guid: 01bde735f676ece489d005fd42887643, type: 3}
       propertyPath: enemyManager
       value: 
@@ -6220,18 +6205,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8126064155750913492, guid: 01bde735f676ece489d005fd42887643, type: 3}
-      propertyPath: bulletInterval
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8285505776809779705, guid: 01bde735f676ece489d005fd42887643, type: 3}
-      propertyPath: expPool
-      value: 
-      objectReference: {fileID: 92538976}
-    - target: {fileID: 8285505776809779705, guid: 01bde735f676ece489d005fd42887643, type: 3}
-      propertyPath: expPooler
-      value: 
-      objectReference: {fileID: 511398166}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6375,10 +6348,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6335179053431742344, guid: 57930643254c757479db4c08c22983a2, type: 3}
-      propertyPath: highScore
-      value: 
-      objectReference: {fileID: 330828280}
-    - target: {fileID: 6335179053431742344, guid: 57930643254c757479db4c08c22983a2, type: 3}
       propertyPath: enemyManager
       value: 
       objectReference: {fileID: 1778683303}
@@ -6386,10 +6355,6 @@ PrefabInstance:
       propertyPath: gameOverManager
       value: 
       objectReference: {fileID: 330828279}
-    - target: {fileID: 8254825166898265401, guid: 57930643254c757479db4c08c22983a2, type: 3}
-      propertyPath: expPool
-      value: 
-      objectReference: {fileID: 92538976}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

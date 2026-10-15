@@ -6,7 +6,7 @@ public class EXPDropManager : MonoBehaviour
     public EXPPool expPool;
     public float dropDistance;
     public GameObject dropTarget;
-    public Vector2 dropPosition;
+    public Vector2 spawnPosition;
 
 
     #endregion
@@ -16,13 +16,12 @@ public class EXPDropManager : MonoBehaviour
         dropTarget = GameObject.FindGameObjectWithTag("Enemy");
 
     }
-    public void SpawnEXP()
+    public void SpawnEXP(Vector2 spawnPosition)
     {
         dropDistance = Random.Range(1f, 3f);
         Vector2 randomDirection = Random.insideUnitCircle.normalized;
-        dropPosition = dropTarget.transform.position + (Vector3)(randomDirection * dropDistance);
         GameObject exp = expPool.GetPooledObj();
-        exp.transform.position = dropPosition;
+        exp.transform.position = spawnPosition;
         exp.SetActive(true);
     }
 }

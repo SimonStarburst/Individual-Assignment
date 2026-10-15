@@ -24,15 +24,9 @@ public class BulletSpawner : MonoBehaviour
 
     public void SpawnObject(Vector2 spawnPosition)
     {
-        //if (attackTimer > spawnInterval)
-        //{       
-            //// Aims in on where the Player is at the point of this being called        
-            targetPosition = target.transform.position;      
-            GameObject bullet = bulletPool.GetPooledObj();        
-            bullet.transform.position = spawnPosition;        
-            Debug.Log("Bullet Shot!");
-            bullet.SetActive(true);
-            attackTimer = 0;
-        //}      
+        targetPosition = target.transform.position;      
+        GameObject bullet = bulletPool.GetPooledObj(); 
+        bullet.transform.position = spawnPosition;        
+        bullet.SetActive(true);
     }
 }

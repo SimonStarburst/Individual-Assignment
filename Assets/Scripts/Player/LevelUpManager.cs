@@ -4,8 +4,8 @@ using UnityEngine;
 public class LevelUpManager : MonoBehaviour
 {
     private PlayerStats playerStats;
-    private int playerLvl = 1;
-    private int playerEXP = 0;
+    public int playerLvl = 1;
+    public int playerEXP = 0;
     private int totalEXP = 0;
 
     [SerializeField] private LevelUpMenuManager levelUpMenu;

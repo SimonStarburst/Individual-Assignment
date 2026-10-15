@@ -10,8 +10,7 @@ public class Health : MonoBehaviour
     public GameOverManager gameOverManager;
     public GameObject playerSprite;
     public GameObject playerWeapons;
-    public HighScoreManager highScore;
-
+    public EnemyOnDefeat enemyDefeat;
 
     public float maxHealth;
     public float currentHealth;
@@ -19,6 +18,7 @@ public class Health : MonoBehaviour
 
     private void Awake()
     {
+        enemyDefeat = GetComponent<EnemyOnDefeat>();
         maxHealth = baseStat.baseHealth;
     }
 
@@ -31,7 +31,8 @@ public class Health : MonoBehaviour
     {
         currentHealth -= amount;
         if (currentHealth <= 0 && gameObject.CompareTag("Enemy"))
-        {
+        {                    
+            enemyDefeat.expSpawner.SpawnEXP(gameObject.transform.position);
             DefeatEnemy();
         }
         if (currentHealth <= 0 && gameObject.CompareTag("Player"))
@@ -42,6 +43,7 @@ public class Health : MonoBehaviour
 
     private void DefeatEnemy()
     {
+
         gameObject.SetActive(false);
     }
 

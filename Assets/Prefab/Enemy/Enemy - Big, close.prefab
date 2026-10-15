@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 9016560968372455168}
   - component: {fileID: 6335179053431742344}
   - component: {fileID: 4666802688099483183}
-  - component: {fileID: 8254825166898265401}
   - component: {fileID: 2271677694864451999}
+  - component: {fileID: 1214732304341034407}
   m_Layer: 6
   m_Name: Enemy - Big, close
   m_TagString: Enemy
@@ -140,7 +140,7 @@ MonoBehaviour:
   gameOverManager: {fileID: 0}
   playerSprite: {fileID: 0}
   playerWeapons: {fileID: 0}
-  highScore: {fileID: 0}
+  enemyDefeat: {fileID: 0}
   maxHealth: 0
   currentHealth: 0
 --- !u!61 &4666802688099483183
@@ -189,23 +189,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &8254825166898265401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5424826031250005867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9084480e459ba54aa58a4c1dfec559f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EXPDrop
-  expPool: {fileID: 0}
-  dropDistance: 0
-  dropTarget: {fileID: 0}
-  expPooler: {fileID: 0}
-  dropPosition: {x: 0, y: 0}
 --- !u!114 &2271677694864451999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,3 +204,17 @@ MonoBehaviour:
   attackStat: {fileID: 11400000, guid: 47902ab4f3888c74aab3032f3ca11c03, type: 2}
   damageInterval: 0.5
   attackTimer: 0
+--- !u!114 &1214732304341034407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5424826031250005867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b1ace8064ac2d944adc7a2d6bafd721, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyOnDefeat
+  expSpawnObject: {fileID: 0}
+  expSpawner: {fileID: 0}

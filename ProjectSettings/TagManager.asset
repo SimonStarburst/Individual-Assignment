@@ -12,6 +12,7 @@ TagManager:
   - Managers
   - BulletSpawner
   - Wall
+  - EXPSpawner
   layers:
   - Default
   - TransparentFX

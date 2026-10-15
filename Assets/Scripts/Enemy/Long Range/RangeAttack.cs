@@ -33,16 +33,6 @@ public class RangeAttack : MonoBehaviour
         Attacking();
     }
 
-    //IEnumerator SpawnBulletCoroutine()
-    //{
-    //    if (movement.shootingRange == true)
-    //    {            
-    //        yield return new WaitForSeconds(1);
-    //        bulletSpawner.SpawnObject();
-    //        Debug.Log("Bullet Shot!");
-    //    }
-    //}
-
     private void Attacking()
     {
         if (movement.shootingRange && attackTimer > bulletInterval)

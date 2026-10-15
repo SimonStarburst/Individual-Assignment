@@ -21,23 +21,28 @@ public class RangeMovement : MonoBehaviour
     }
 
     private void Start()
-    {
+    {                
+        target = GameObject.FindGameObjectWithTag("Player");
         movementSpeed = enemyStats.baseSpeed;
     }
 
     private void Update()
     {
-        Movement();
+        MovementShoot();
+
     }
 
-    private void Movement()
+    private void MovementShoot()
     {
-        target = GameObject.FindGameObjectWithTag("Player");
         transform.position = Vector2.MoveTowards(transform.position, target.transform.position, (movementSpeed * Time.deltaTime));
-        if (Vector2.Distance(gameObject.transform.position, target.transform.position) < 10f)
+        if (Vector2.Distance(gameObject.transform.position, target.transform.position) < 20f)
         {
             shootingRange = true;
-            //Debug.Log("Enemy shoots!");
+        }
+        else
+        {
+            shootingRange = false;
+
         }
 
     }
