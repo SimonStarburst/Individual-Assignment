@@ -10,6 +10,8 @@ public class EnemyOnDefeat : MonoBehaviour
 
     public GameObject expSpawnObject;
     public EXPDropManager expSpawner;
+    public GameObject highScoreObject;
+    public HighScoreManager highScore;
 
 
     #endregion
@@ -19,6 +21,8 @@ public class EnemyOnDefeat : MonoBehaviour
         enemyHealth = GetComponent<Health>();
         expSpawnObject = GameObject.FindGameObjectWithTag("EXPSpawner");
         expSpawner = expSpawnObject.GetComponentInChildren<EXPDropManager>();
+        highScoreObject = GameObject.FindGameObjectWithTag("Managers");
+        highScore = highScoreObject.GetComponentInChildren<HighScoreManager>();
     }
 
     void Start()
@@ -31,13 +35,13 @@ public class EnemyOnDefeat : MonoBehaviour
         
     }
 
-    public void EXPDrop()
+    public void EXPDrop(Vector2 spawnPosition)
     {
-        expSpawner.SpawnEXP(gameObject.transform.position);
+        expSpawner.SpawnEXP(spawnPosition);
     }
 
-    private void Score()
+    public void Score(float points)
     {
-
+        highScore.EnemyScore(points);
     }
 }

@@ -32,7 +32,8 @@ public class Health : MonoBehaviour
         currentHealth -= amount;
         if (currentHealth <= 0 && gameObject.CompareTag("Enemy"))
         {                    
-            enemyDefeat.expSpawner.SpawnEXP(gameObject.transform.position);
+            enemyDefeat.EXPDrop(gameObject.transform.position);
+            enemyDefeat.Score(maxHealth);
             DefeatEnemy();
         }
         if (currentHealth <= 0 && gameObject.CompareTag("Player"))
