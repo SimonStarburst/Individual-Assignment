@@ -5,18 +5,28 @@ public class BulletScript : MonoBehaviour
     #region Variables
     [SerializeField] private float damage;
     [SerializeField] private float bulletSpeed;
-    GameObject target;
-    Vector2 targetPosition;
+    private GameObject target;
+    private Vector2 targetDirection;
+    private Vector2 targetPosition;
 
+    private Rigidbody2D rb;
     #endregion
-    void Start()
-    {
+    void Awake()
+    {        
         target = GameObject.FindGameObjectWithTag("Player");
-        targetPosition = target.transform.position;
+        rb = GetComponent<Rigidbody2D>();
+        gameObject.SetActive(false);
     }
+
+    private void OnEnable()
+    {                
+        targetDirection = target.transform.position - transform.position;
+    }
+
     void Update()
-    {
-        transform.position = Vector2.MoveTowards(transform.position, targetPosition, (bulletSpeed * Time.deltaTime));
+    {   
+        // Bullet moves faster depending on Player distance - bad, FIX!     
+        rb.linearVelocity = targetDirection.normalized * bulletSpeed;  
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

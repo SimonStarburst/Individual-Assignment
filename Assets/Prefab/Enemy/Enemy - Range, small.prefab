@@ -109,6 +109,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RangeMovement
   enemyStats: {fileID: 11400000, guid: dbb09d584d9788543b55566c18df9738, type: 2}
+  shootingRange: 0
+  fleeingRange: 0
 --- !u!114 &5436250430876360061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,3 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5593b135c13db604a89ccd0385d4e606, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RangeAttack
+  bulletSpawnObject: {fileID: 0}
+  bulletSpawner: {fileID: 0}
+  bulletInterval: 10
+  attackTimer: 0

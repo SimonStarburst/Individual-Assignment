@@ -45,10 +45,12 @@ public class RangeAttack : MonoBehaviour
 
     private void Attacking()
     {
-        if (movement.shootingRange == true && attackTimer > bulletInterval)
+        if (movement.shootingRange && attackTimer > bulletInterval)
         {
-            bulletSpawner.SpawnObject();
-            Debug.Log("Bullet Shot!");
+            bulletSpawner.SpawnObject(gameObject.transform.position);
+            attackTimer = 0;
         }
     }
+
+
 }
