@@ -51,10 +51,12 @@ public class Health : MonoBehaviour
 
     private void DefeatPlayer()
     {
-        highScoreManager.SaveScore();
+        highScoreManager.HighScore();
+
         gameOverManager.GameOver();
         playerSprite.SetActive(false);
         playerWeapons.SetActive(false);
-        enemyManager.StopSpawning();
+        enemyManager.StopSpawning();        
+        highScoreManager.SaveScore();
     }
 }

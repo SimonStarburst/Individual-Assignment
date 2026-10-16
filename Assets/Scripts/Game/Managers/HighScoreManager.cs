@@ -13,14 +13,16 @@ public class HighScoreManager : MonoBehaviour
     public int playerLevel;
     public int totalScore;
     public int finalScore;
-    public int highScore = 0;
+    public int highScore;
+    public int loadedHighScore;
 
     #endregion
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        LoadScore();
+        highScore = loadedHighScore;
     }
 
     // Update is called once per frame
@@ -56,10 +58,11 @@ public class HighScoreManager : MonoBehaviour
     public void SaveScore()
     {
         PlayerPrefs.SetInt("HighScore", highScore);
+        Debug.Log("High Score" + highScore);
     }
 
     public void LoadScore()
     {
-        int loadedHighScore = PlayerPrefs.GetInt("HighScore");
+        loadedHighScore = PlayerPrefs.GetInt("HighScore");
     }
 }

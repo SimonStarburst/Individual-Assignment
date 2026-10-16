@@ -15,11 +15,7 @@ public class GameOverHighScore : MonoBehaviour
 
     private void OnDefeat()
     {
-        if (playerHealth.currentHealth <= 0)
-        {
-            highScore.HighScore();
-            highScoreText.text = Convert.ToString("High Score:\n" + highScore.highScore);
-        }
+        highScoreText.text = Convert.ToString("High Score:\n" + highScore.highScore);
     }
 
 }
