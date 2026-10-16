@@ -9,7 +9,7 @@ public class HealthUI : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         healthText.text = Convert.ToString(playerHealth.currentHealth) + "/" + Convert.ToString(playerHealth.maxHealth);
     }

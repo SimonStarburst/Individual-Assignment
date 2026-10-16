@@ -127,6 +127,7 @@ MonoBehaviour:
   baseStat: {fileID: 11400000, guid: dbb09d584d9788543b55566c18df9738, type: 2}
   enemyManager: {fileID: 0}
   gameOverManager: {fileID: 0}
+  highScoreManager: {fileID: 0}
   playerSprite: {fileID: 0}
   playerWeapons: {fileID: 0}
   enemyDefeat: {fileID: 0}

@@ -13,6 +13,7 @@ public class HighScoreManager : MonoBehaviour
     public int playerLevel;
     public int totalScore;
     public int finalScore;
+    public int highScore = 0;
 
     #endregion
 
@@ -26,6 +27,7 @@ public class HighScoreManager : MonoBehaviour
     void Update()
     {
         ScoreTotal();
+        FinalScore();
     }
 
     public void ScoreTotal()
@@ -41,5 +43,23 @@ public class HighScoreManager : MonoBehaviour
     public void FinalScore()
     {
         finalScore = totalScore + (playTime * 10);
+    }
+
+    public void HighScore()
+    {
+        if (highScore < finalScore)
+        {
+            highScore = finalScore;
+        }
+    }
+
+    public void SaveScore()
+    {
+        PlayerPrefs.SetInt("HighScore", highScore);
+    }
+
+    public void LoadScore()
+    {
+        int loadedHighScore = PlayerPrefs.GetInt("HighScore");
     }
 }

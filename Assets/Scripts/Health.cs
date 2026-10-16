@@ -8,6 +8,7 @@ public class Health : MonoBehaviour
     public BaseStats baseStat;
     public EnemyManager enemyManager;
     public GameOverManager gameOverManager;
+    public HighScoreManager highScoreManager;
     public GameObject playerSprite;
     public GameObject playerWeapons;
     public EnemyOnDefeat enemyDefeat;
@@ -50,6 +51,7 @@ public class Health : MonoBehaviour
 
     private void DefeatPlayer()
     {
+        highScoreManager.SaveScore();
         gameOverManager.GameOver();
         playerSprite.SetActive(false);
         playerWeapons.SetActive(false);
