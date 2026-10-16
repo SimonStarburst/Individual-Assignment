@@ -87,7 +87,7 @@ public class LevelUpManager : MonoBehaviour
     // public void CheckLevelUp()
     public void CheckLevelUp()
     {
-        if (playerEXP >= LEVEL_UP)
+        if (playerEXP > LEVEL_UP)
         {
 
             LevelUp();
@@ -97,74 +97,74 @@ public class LevelUpManager : MonoBehaviour
     //required to reach the previous level and the player level is increased by 1.
     private void LevelUp()
     {
-        LevelUpOptionButton1();
-        LevelUpOptionButton2();
-        LevelUpOptionButton3();
+        //LevelUpOptionButton1();
+        //LevelUpOptionButton2();
+        //LevelUpOptionButton3();
         levelUpMenu.OpenLevelUp();
         playerEXP -= LEVEL_UP;
         playerLvl += 1;
     }
 
-    private void LevelUpOptionButton1()
-    {
-        random1 = Random.Range(0, upgrades.Count);
+    //private void LevelUpOptionButton1()
+    //{
+    //    random1 = Random.Range(0, upgrades.Count);
 
-        upgradeOptions.Add(upgrades[random1]);
+    //    upgradeOptions.Add(upgrades[random1]);
 
-        upgradeButton1.Set(upgradeOptions[0]);
+    //    upgradeButton1.Set(upgradeOptions[0]);
 
-        upgrades.Remove(upgrades[random1]);
-    }
+    //    upgrades.Remove(upgrades[random1]);
+    //}
 
-    private void LevelUpOptionButton2()
-    {
-        random2 = Random.Range(0, upgrades.Count);
+    //private void LevelUpOptionButton2()
+    //{
+    //    random2 = Random.Range(0, upgrades.Count);
 
-        upgradeOptions.Add(upgrades[random2]);
+    //    upgradeOptions.Add(upgrades[random2]);
 
-        upgradeButton2.Set(upgradeOptions[1]);   
+    //    upgradeButton2.Set(upgradeOptions[1]);   
         
-        upgrades.Remove(upgrades[random2]);
-    }
+    //    upgrades.Remove(upgrades[random2]);
+    //}
 
-    private void LevelUpOptionButton3()
-    {
-        random3 = Random.Range(0, upgrades.Count);
+    //private void LevelUpOptionButton3()
+    //{
+    //    random3 = Random.Range(0, upgrades.Count);
 
-        upgradeOptions.Add(upgrades[random3]);
+    //    upgradeOptions.Add(upgrades[random3]);
 
-        upgradeButton3.Set(upgradeOptions[2]);        
+    //    upgradeButton3.Set(upgradeOptions[2]);        
         
-        upgrades.Remove(upgrades[random3]);
-    }
+    //    upgrades.Remove(upgrades[random3]);
+    //}
 
-    private void AuraBase()
-    {
-        Debug.Log("Aura Base has been chosen!");
+    //private void AuraBase()
+    //{
+    //    Debug.Log("Aura Base has been chosen!");
 
-        auraGet = true;
-        upgrades.AddRange(auraUpgrades);        
-        // Remove AuraBase from list
-    }
+    //    auraGet = true;
+    //    upgrades.AddRange(auraUpgrades);        
+    //    // Remove AuraBase from list
+    //}
 
-    private void LaserBase()
-    {
-        Debug.Log("Laser Base has been chosen!");
+    //private void LaserBase()
+    //{
+    //    Debug.Log("Laser Base has been chosen!");
 
-        laserGet = true;
-        upgrades.AddRange(laserUpgrades);
-        // Remove LaserBase from list
+    //    laserGet = true;
+    //    upgrades.AddRange(laserUpgrades);
+    //    // Remove LaserBase from list
 
-    }
+    //}
 
-    private void OrbBase()
-    {
-        Debug.Log("Orb Base has been chosen!");
+    //private void OrbBase()
+    //{
+    //    Debug.Log("Orb Base has been chosen!");
 
-        laserGet = true;
-        upgrades.AddRange(orbUpgrades);
-        // Remove OrbBase from list
+    //    laserGet = true;
+    //    upgrades.AddRange(orbUpgrades);
+    //    // Remove OrbBase from list
 
-    }
+    //}
 
 }

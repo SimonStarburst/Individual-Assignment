@@ -28,8 +28,6 @@ public class LevelUpMenuManager : MonoBehaviour
     private bool laserGet;
     private bool orbGet;
 
-
-
     #endregion
 
     private void Awake()
@@ -56,6 +54,24 @@ public class LevelUpMenuManager : MonoBehaviour
         panel.SetActive(false);
     }
 
+    public void Button1()
+    {
 
+    }
+
+    public void Button2()
+    {
+
+    }
+
+    public void Button3()
+    {
+
+    }
+
+    public void Button4()
+    {
+
+    }
 
 }

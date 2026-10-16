@@ -2035,8 +2035,6 @@ MonoBehaviour:
   - {fileID: 1785626240}
   - {fileID: 120124717}
   - {fileID: 2064979842}
-  - {fileID: 1668000139}
-  - {fileID: 307064027}
   auraUpgrades:
   - {fileID: 978475407}
   - {fileID: 377531222}
