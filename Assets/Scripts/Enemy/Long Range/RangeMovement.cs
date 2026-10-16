@@ -34,16 +34,32 @@ public class RangeMovement : MonoBehaviour
 
     private void MovementShoot()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target.transform.position, (movementSpeed * Time.deltaTime));
-        if (Vector2.Distance(gameObject.transform.position, target.transform.position) < 20f)
+        
+        if (Vector2.Distance(gameObject.transform.position, target.transform.position) >= 20f)
         {
-            shootingRange = true;
+            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, (movementSpeed * Time.deltaTime));
         }
+
+        else if (Vector2.Distance(gameObject.transform.position, target.transform.position) < 20f && Vector2.Distance(gameObject.transform.position, target.transform.position) >= 5f)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, (movementSpeed * Time.deltaTime));
+            shootingRange = true;
+            fleeingRange = false;
+        }
+
+        else if (Vector2.Distance(gameObject.transform.position, target.transform.position) < 5f)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, (-movementSpeed * Time.deltaTime));
+
+            fleeingRange = true;
+        }
+
         else
         {
             shootingRange = false;
-
+            fleeingRange = false;
         }
+
 
     }
 
