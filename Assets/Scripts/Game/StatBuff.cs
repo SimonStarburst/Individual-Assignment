@@ -9,9 +9,6 @@ public class StatBuff : MonoBehaviour
     [SerializeField] private ExpAbsorbPlayerScript expAbsorb;
     [SerializeField] private OrbScript orb;
     [SerializeField] private LaserScript laser;
-    [SerializeField] private EXPAbsorb absorb;
-
-
 
     public void AuraBase()
     {
@@ -59,7 +56,7 @@ public class StatBuff : MonoBehaviour
 
     public void ExpAbsorb()
     {
-        absorb.transform.localScale += new Vector3(1, 1,1);
+        expAbsorb.transform.localScale += new Vector3(1, 1, 1);
     }
 
     public void MoveSpeed()

@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelUpMenuManager : MonoBehaviour
 {
@@ -9,8 +10,8 @@ public class LevelUpMenuManager : MonoBehaviour
     [SerializeField] private PauseManager pauseManager;
     [SerializeField] private LevelUpManager levelUpManager;
 
-    [SerializeField] List<UpgradeButton> upgradeButtons;
-    [SerializeField] List<UpgradeButton> currentActiveButtons;
+    [SerializeField] List<Button> buttons;
+    [SerializeField] List<Button> upgradeButtons;
 
     #endregion
 

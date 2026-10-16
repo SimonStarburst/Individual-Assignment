@@ -46,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        moveSpeed = playerStats.moveStat;
         playerPosition = gameObject.transform.position;
         rb.linearVelocity = moveInput * moveSpeed;
         LastDirectionKeyboard();        
