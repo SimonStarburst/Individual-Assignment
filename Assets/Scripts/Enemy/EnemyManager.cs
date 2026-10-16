@@ -4,6 +4,9 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     #region Variables
+
+    private TimerScript timer;
+
     [Header("Pools")]
     public ObjectPool closeSmallPool;
     public ObjectPool closeBigPool;

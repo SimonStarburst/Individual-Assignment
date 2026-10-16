@@ -8,6 +8,7 @@ public class LevelUpManager : MonoBehaviour
     private PlayerStats playerStats;
     public int playerLvl = 1;
     public int playerEXP = 0;
+    public int toNextLevel;
     private int totalEXP = 0;
 
     public int random1;
@@ -41,6 +42,11 @@ public class LevelUpManager : MonoBehaviour
         auraGet = false;
         laserGet = false;
         orbGet = false;
+    }
+
+    private void Update()
+    {
+        toNextLevel = playerLvl * 10;
     }
 
     // The required experience to level up is the current player level times 100, so it will always require more exp.
