@@ -10,22 +10,36 @@ public class StatBuff : MonoBehaviour
     [SerializeField] private OrbScript orb;
     [SerializeField] private LaserScript laser;
 
+    private LevelUpMenuManager levelUpMenuManager;
+
+    private void Awake()
+    {
+        levelUpMenuManager = GetComponent<LevelUpMenuManager>();
+    }
+
+
     public void AuraBase()
     {
-
+        levelUpMenuManager.upgradeButtons.AddRange(levelUpMenuManager.auraUpgrades);
     }
     public void AuraArea()
     {
-
+        aura.transform.localScale += new Vector3(1, 1, 1);
     }
 
     public void AuraDamage()
     {
+        aura.damage += 1;
+    }
+    public void AuraCooldown()
+    {
+        aura.cooldown -= 0.5f;
 
     }
 
     public void LaserBase()
     {
+        levelUpMenuManager.upgradeButtons.AddRange(levelUpMenuManager.laserUpgrades);
 
     }
 
@@ -41,6 +55,7 @@ public class StatBuff : MonoBehaviour
 
     public void OrbBase()
     {
+        levelUpMenuManager.upgradeButtons.AddRange(levelUpMenuManager.orbUpgrades);
 
     }
 
@@ -76,7 +91,7 @@ public class StatBuff : MonoBehaviour
 
     public void SwordSpeed()
     {
-        sword.cooldown -= 0.2f;
+        sword.cooldown -= 0.5f;
     }
 
 }
