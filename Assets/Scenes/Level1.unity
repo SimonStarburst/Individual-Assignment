@@ -333,7 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cfb46570ff36e740ae4c14b5bc98399, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectPool
-  prefab: {fileID: 5424826031250005867, guid: 57930643254c757479db4c08c22983a2, type: 3}
+  prefab: {fileID: 5703298801508758842, guid: 46c38b3114a2db14e8c27fd2442eb682, type: 3}
   poolSize: 20
   currentPoolSize: 0
   maxPoolSize: 100
@@ -2162,7 +2162,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.5270978, g: 0.6698113, b: 0.47076362, a: 1}
+  m_Color: {r: 0.8867924, g: 0.8686662, b: 0.8324136, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4909,7 +4909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cfb46570ff36e740ae4c14b5bc98399, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectPool
-  prefab: {fileID: 5424826031250005867, guid: 57930643254c757479db4c08c22983a2, type: 3}
+  prefab: {fileID: 4343139310448740654, guid: 01bde735f676ece489d005fd42887643, type: 3}
   poolSize: 20
   currentPoolSize: 0
   maxPoolSize: 100
@@ -5266,7 +5266,10 @@ MonoBehaviour:
   closeBigPool: {fileID: 2104426330}
   rangeSmallPool: {fileID: 79659880}
   rangeBigPool: {fileID: 1675832373}
-  spawnInterval: 1
+  closeSmallInterval: 1
+  closeBigInterval: 1
+  rangeSmallInterval: 1
+  rangeBigInterval: 1
   spawnDistance: 50
   spawnPosition: {x: 0, y: 0}
 --- !u!1 &1833759246
@@ -6262,6 +6265,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1608096443213318184, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: m_Color.b
+      value: 0.1960784
+      objectReference: {fileID: 0}
+    - target: {fileID: 1608096443213318184, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 1608096443213318184, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 1608096443213318184, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4463177494490084843, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
       propertyPath: levelUpMenu
       value: 
@@ -6393,6 +6412,10 @@ PrefabInstance:
     - target: {fileID: 5153498226807135862, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
       propertyPath: m_Camera
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7449248626332697784, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9070195231522010199, guid: 1cc2c84f24e04564695a30f7f039f098, type: 3}
       propertyPath: enemyManager
