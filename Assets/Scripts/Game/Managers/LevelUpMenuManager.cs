@@ -6,10 +6,14 @@ public class LevelUpMenuManager : MonoBehaviour
 {
     #region Variables
     [SerializeField] GameObject panel;
-    PauseManager pauseManager;
+    [SerializeField] private PauseManager pauseManager;
+    [SerializeField] private LevelUpManager levelUpManager;
 
     [SerializeField] List<UpgradeButton> upgradeButtons;
+    [SerializeField] List<UpgradeButton> currentActiveButtons;
+
     #endregion
+
     private void Awake()
     {
         pauseManager = GetComponent<PauseManager>();
@@ -23,7 +27,7 @@ public class LevelUpMenuManager : MonoBehaviour
 
     }
 
-    public void Upgrade(int pressedButton)
+    public void Upgrade()
     {
         CloseLevelUp();
     }

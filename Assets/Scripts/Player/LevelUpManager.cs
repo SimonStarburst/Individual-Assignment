@@ -113,18 +113,29 @@ public class LevelUpManager : MonoBehaviour
 
         upgradeButton1.Set(upgradeOptions[0]);
 
+        upgrades.Remove(upgrades[random1]);
     }
 
     private void LevelUpOptionButton2()
     {
         random2 = Random.Range(0, upgrades.Count);
-        upgradeButton2.Set(upgrades[random2]);
+
+        upgradeOptions.Add(upgrades[random2]);
+
+        upgradeButton2.Set(upgradeOptions[1]);   
+        
+        upgrades.Remove(upgrades[random2]);
     }
 
     private void LevelUpOptionButton3()
     {
         random3 = Random.Range(0, upgrades.Count);
-        upgradeButton3.Set(upgrades[random3]);
+
+        upgradeOptions.Add(upgrades[random3]);
+
+        upgradeButton3.Set(upgradeOptions[2]);        
+        
+        upgrades.Remove(upgrades[random3]);
     }
 
     private void AuraBase()
