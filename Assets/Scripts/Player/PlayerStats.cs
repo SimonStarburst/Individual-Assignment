@@ -24,6 +24,17 @@ public class PlayerStats : MonoBehaviour
     [Header("Player Level")]
     [SerializeField] private int playerLvl;
     [SerializeField] private int totalExp;
+
+
+    [SerializeField] private int swordLvl;
+    [SerializeField] private int moveLvl;
+    [SerializeField] private int auraLvl;
+    [SerializeField] private int laserLvl;
+    [SerializeField] private int orbLvl;
+
+
+
+
     #endregion
 
 
@@ -33,6 +44,8 @@ public class PlayerStats : MonoBehaviour
         playerHP = maxHP;
         moveStat = playerStats.baseSpeed;
         attackStat = playerStats.baseStrength;
+        swordLvl = 1;
+        moveLvl = 1;
     }
 
 

@@ -21,8 +21,14 @@ public class LevelUpManager : MonoBehaviour
     [SerializeField] private UpgradeButton upgradeButton3;
 
     [Header("Lists")]
-    //List of available upgrades
+    //List of ALL available upgrades
     [SerializeField] private List<LvlUpCard> upgrades;
+
+    //List of upgrades available on level up
+    //Add the chosen upgrades to this list and then
+    //re-add them to the upgrade list if they are stackable
+    //OR remove them from the upgrade list if they are base weapons!
+    [SerializeField] private List<LvlUpCard> upgradeOptions;
 
     [SerializeField] private List<LvlUpCard> auraUpgrades;
     [SerializeField] private List<LvlUpCard> laserUpgrades;
@@ -49,7 +55,7 @@ public class LevelUpManager : MonoBehaviour
         toNextLevel = playerLvl * 10;
     }
 
-    // The required experience to level up is the current player level times 100, so it will always require more exp.
+    // The required experience to level up is the current player level times 10, so it will always require more exp.
     int LEVEL_UP
     {
         get
@@ -102,21 +108,10 @@ public class LevelUpManager : MonoBehaviour
     private void LevelUpOptionButton1()
     {
         random1 = Random.Range(0, upgrades.Count);
-        upgradeButton1.Set(upgrades[random1]);
 
-        if (upgradeButton1.nameText.text == "AuraBase")
-        {
-            AuraBase();
-        }
+        upgradeOptions.Add(upgrades[random1]);
 
-        else if (upgradeButton1.nameText.text == "LaserBase")
-        {
-            LaserBase();
-        }
-        else if (upgradeButton1.nameText.text == "OrbBase")
-        {
-            OrbBase();
-        }
+        upgradeButton1.Set(upgradeOptions[0]);
 
     }
 
@@ -124,57 +119,30 @@ public class LevelUpManager : MonoBehaviour
     {
         random2 = Random.Range(0, upgrades.Count);
         upgradeButton2.Set(upgrades[random2]);
-        if (upgradeButton1.nameText.text == "AuraBase")
-        {
-            AuraBase();
-        }
-
-        else if (upgradeButton1.nameText.text == "LaserBase")
-        {
-            LaserBase();
-        }
-        else if (upgradeButton1.nameText.text == "OrbBase")
-        {
-            OrbBase();
-        }
     }
 
     private void LevelUpOptionButton3()
     {
         random3 = Random.Range(0, upgrades.Count);
         upgradeButton3.Set(upgrades[random3]);
-        if (upgradeButton1.nameText.text == "AuraBase")
-        {
-            AuraBase();
-        }
-
-        else if (upgradeButton1.nameText.text == "LaserBase")
-        {
-            LaserBase();
-        }
-        else if (upgradeButton1.nameText.text == "OrbBase")
-        {
-            OrbBase();
-        }
     }
 
     private void AuraBase()
     {
         Debug.Log("Aura Base has been chosen!");
 
-        // Remove AuraBase from list
         auraGet = true;
-        upgrades.AddRange(auraUpgrades);
+        upgrades.AddRange(auraUpgrades);        
+        // Remove AuraBase from list
     }
 
     private void LaserBase()
     {
         Debug.Log("Laser Base has been chosen!");
 
-
-        // Remove LaserBase from list
         laserGet = true;
         upgrades.AddRange(laserUpgrades);
+        // Remove LaserBase from list
 
     }
 
@@ -182,10 +150,9 @@ public class LevelUpManager : MonoBehaviour
     {
         Debug.Log("Orb Base has been chosen!");
 
-
-        // Remove OrbBase from list
         laserGet = true;
         upgrades.AddRange(orbUpgrades);
+        // Remove OrbBase from list
 
     }
 
