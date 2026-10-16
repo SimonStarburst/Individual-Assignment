@@ -87,7 +87,7 @@ public class LevelUpManager : MonoBehaviour
     // public void CheckLevelUp()
     public void CheckLevelUp()
     {
-        if (playerEXP > LEVEL_UP)
+        if (playerEXP >= LEVEL_UP)
         {
 
             LevelUp();
