@@ -5,7 +5,7 @@ public class EnemyManager : MonoBehaviour
 {
     #region Variables
 
-    private TimerScript timer;
+    [SerializeField] private TimerScript timer;
 
     [Header("Pools")]
     public ObjectPool closeSmallPool;
@@ -30,16 +30,65 @@ public class EnemyManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        closeSmallInterval = 6;
+        closeBigInterval = 16;
+        rangeSmallInterval = 8;
+        rangeBigInterval = 18;
+
         StartCoroutine(SpawnCloseSmallCoroutine());
         StartCoroutine(SpawnCloseBigCoroutine());
         StartCoroutine(SpawnRangeSmallCoroutine());
         StartCoroutine(SpawnRangeBigCoroutine());
+        StartCoroutine(SpawnTimes());
     }
 
     private void Update()
     {
         target = GameObject.FindGameObjectWithTag("Player");
     }
+
+    private void EnemySpawnTimer()
+    {
+        if (closeSmallInterval > 0.2f)
+        {
+            closeSmallInterval -= 0.2f;
+        }
+
+        else if (closeBigInterval > 0.2f)
+        {
+            closeBigInterval -= 0.2f;
+        }
+
+        else if (rangeSmallInterval > 0.2f)
+        {
+            rangeSmallInterval -= 0.2f;
+        }
+
+        else if (rangeBigInterval > 0.2f)
+        {
+            rangeBigInterval -= 0.2f;
+        }
+
+        else if (rangeBigInterval == 0.2f)
+        {
+            StopCoroutine(SpawnTimes());
+        }
+
+    }
+
+    #region SpawnCoroutines
+
+    // Every 30 seconds, this coroutine calls upon EnemySpawnTimer every 30 seconds
+    // lowering the spawn interval for the enemies
+    IEnumerator SpawnTimes()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(30);
+            EnemySpawnTimer();
+        }
+    }
+
 
     IEnumerator SpawnCloseSmallCoroutine()
     {
@@ -73,7 +122,10 @@ public class EnemyManager : MonoBehaviour
             SpawnRangeBigObject();
         }
     }
+    #endregion
 
+
+    #region Spawner Scripts
     private void SpawnCloseSmallObject()
     {
         Vector2 randomDirection = Random.insideUnitCircle.normalized;
@@ -109,6 +161,7 @@ public class EnemyManager : MonoBehaviour
         enemy.transform.position = spawnPosition;
         enemy.SetActive(true);
     }
+    #endregion
 
     public void StopSpawning()
     {

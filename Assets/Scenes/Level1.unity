@@ -1382,6 +1382,7 @@ MonoBehaviour:
   totalScore: 0
   finalScore: 0
   highScore: 0
+  loadedHighScore: 0
 --- !u!114 &330828281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4648,6 +4649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e826c83613c41ec4380001bd36acacdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  timerTime: 0
   timerText: {fileID: 1275609590}
 --- !u!1 &1363807099
 GameObject:
@@ -5084,6 +5086,10 @@ PrefabInstance:
     - target: {fileID: 7570037286266038863, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
       propertyPath: m_Name
       value: Enemy - Close, small
+      objectReference: {fileID: 0}
+    - target: {fileID: 7570037286266038863, guid: 77287aa757c12e74fb9c475a7a55d23c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5724,6 +5730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa8335f45454c4c48a01dd99c2b46879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyManager
+  timer: {fileID: 1275609592}
   closeSmallPool: {fileID: 1891641119}
   closeBigPool: {fileID: 2104426330}
   rangeSmallPool: {fileID: 79659880}
@@ -6565,6 +6572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy - Range, small
       objectReference: {fileID: 0}
+    - target: {fileID: 5703298801508758842, guid: 46c38b3114a2db14e8c27fd2442eb682, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7593947538495854082, guid: 46c38b3114a2db14e8c27fd2442eb682, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8
@@ -6621,6 +6632,10 @@ PrefabInstance:
     - target: {fileID: 4343139310448740654, guid: 01bde735f676ece489d005fd42887643, type: 3}
       propertyPath: m_Name
       value: Enemy - Range, big
+      objectReference: {fileID: 0}
+    - target: {fileID: 4343139310448740654, guid: 01bde735f676ece489d005fd42887643, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6230392575804249648, guid: 01bde735f676ece489d005fd42887643, type: 3}
       propertyPath: enemyManager
@@ -6771,6 +6786,10 @@ PrefabInstance:
     - target: {fileID: 5424826031250005867, guid: 57930643254c757479db4c08c22983a2, type: 3}
       propertyPath: m_Name
       value: Enemy - Close, big
+      objectReference: {fileID: 0}
+    - target: {fileID: 5424826031250005867, guid: 57930643254c757479db4c08c22983a2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5776831429121168578, guid: 57930643254c757479db4c08c22983a2, type: 3}
       propertyPath: m_LocalPosition.x
